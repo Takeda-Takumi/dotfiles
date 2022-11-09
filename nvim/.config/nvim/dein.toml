@@ -1,0 +1,112 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+build = 'coc#utilinstall()'
+hook_add = '''
+source ~/.config/nvim/plugins/coc.vim
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+depends = ['ryanoasis/vim-devicons']
+hook_add = '''
+source ~/.config/nvim/plugins/nerdtree.vim
+'''
+
+# gruvboxのデザイン
+[[plugins]]
+repo = 'morhetz/gruvbox'
+hook_add = '''
+source ~/.config/nvim/plugins/gruvbox.vim
+'''
+
+# yankをハイライトする
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-highlightedyank.vim
+'''
+
+# git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# ステータスバー
+[[plugins]]
+repo = 'vim-airline/vim-airline.git'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-airline.vim
+'''
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes.git'
+
+# gcでコメントアウト
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+# saiw) => (test)
+[[plugins]]
+repo = 'machakann/vim-sandwich'
+
+# input: i,
+# output: 
+      # ...........
+# a , b , cccccccc , d , e
+      # └─── a, ──┘
+[[plugins]]
+repo = 'wellle/targets.vim'
+
+# 閉じ括弧
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+hook_add = '''
+source ~/.config/nvim/plugins/auto-pairs.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = '''
+./install -all
+'''
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+
+# 日本語help
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+# 色付き括弧
+[[plugins]]
+repo = 'luochen1990/rainbow'
+
+# ウィンドウのサイズ変更
+[[plugins]]
+repo = 'simeji/winresizer'
+# hook_add = '''
+# source = ~/.config/nvim/plugins/winresizer.vim
+# '''
+
+# nerdtreeにgitのステータスを表示
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+# markdown preview
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+hook_post_update = '''
+sh -c "cd app && yarn install"
+'''
+
+# 置換をプレビュー
+[[plugins]]
+repo = 'markonm/traces.vim'
