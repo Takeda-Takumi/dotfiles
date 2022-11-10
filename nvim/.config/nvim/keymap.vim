@@ -1,4 +1,4 @@
-set pastetoggle=<F3> "F3でpaste切り替え"
+" set pastetoggle=<F3> "F3でpaste切り替え"
 
 
 " 挿入モードからjjで抜ける

@@ -13,6 +13,10 @@ if dein#check_install()
 	call dein#install()
 endif
 
+" for w lugin_name in key(dein#get())
+"     call dein#set_hook(plugin_name
+"     q q)
+" endfor
 " plugin remove check {{{
 let s:removed_plugins = dein#check_clean()
 if len(s:removed_plugins) > 0
@@ -20,3 +24,5 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 " }}}
+
+

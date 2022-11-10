@@ -1,6 +1,26 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# 閉じ括弧
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+# hook_add = '''
+# autocmd BufEnter * call AutoPairsInit()
+# '''
+# hook_add = '''
+# source ~/.config/nvim/plugins/auto-pairs.vim
+# # '''
+# hook_post_source = '''
+# call AutoPairsInit()
+# autocmd * call AutoPairsInit()
+# imap
+# '''
+
+
+
+# [[plugins]]
+# repo = 'cohama/lexima.vim'
+
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
@@ -8,6 +28,7 @@ build = 'coc#utilinstall()'
 hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
+on_source = 'lexima.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -64,12 +85,6 @@ repo = 'machakann/vim-sandwich'
 [[plugins]]
 repo = 'wellle/targets.vim'
 
-# 閉じ括弧
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-hook_add = '''
-source ~/.config/nvim/plugins/auto-pairs.vim
-'''
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -85,8 +100,8 @@ repo = 'junegunn/fzf.vim'
 repo = 'vim-jp/vimdoc-ja'
 
 # 色付き括弧
-[[plugins]]
-repo = 'luochen1990/rainbow'
+# [[plugins]]
+# repo = 'luochen1990/rainbow'
 
 # ウィンドウのサイズ変更
 [[plugins]]
@@ -110,3 +125,10 @@ sh -c "cd app && yarn install"
 # 置換をプレビュー
 [[plugins]]
 repo = 'markonm/traces.vim'
+
+# autocmdのイベントを表示
+# [[plugins]]
+# repo = 'rcarriga/nvim-notify'
+# hook_add = '''
+# source ~/.config/nvim/plugins/nvim-notify.vim
+# '''
