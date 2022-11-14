@@ -1,4 +1,4 @@
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! CheckBackspace() abort

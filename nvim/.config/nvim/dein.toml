@@ -4,22 +4,9 @@ repo = 'Shougo/dein.vim'
 # 閉じ括弧
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
-# hook_add = '''
-# autocmd BufEnter * call AutoPairsInit()
-# '''
-# hook_add = '''
-# source ~/.config/nvim/plugins/auto-pairs.vim
-# # '''
-# hook_post_source = '''
-# call AutoPairsInit()
-# autocmd * call AutoPairsInit()
-# imap
-# '''
-
-
-
-# [[plugins]]
-# repo = 'cohama/lexima.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/auto-pairs.vim
+'''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
@@ -36,6 +23,13 @@ depends = ['ryanoasis/vim-devicons']
 hook_add = '''
 source ~/.config/nvim/plugins/nerdtree.vim
 '''
+
+# ファイラー
+# [[plugins]]
+# repo = 'lambdalisue/fern.vim'
+# hook_add = '''
+# source ~/.config/nvim/plugins/fern.vim
+# '''
 
 # gruvboxのデザイン
 [[plugins]]
@@ -100,9 +94,11 @@ repo = 'junegunn/fzf.vim'
 repo = 'vim-jp/vimdoc-ja'
 
 # 色付き括弧
-# [[plugins]]
-# repo = 'luochen1990/rainbow'
-
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+source ~/.config/nvim/plugins/rainbow.vim
+'''
 # ウィンドウのサイズ変更
 [[plugins]]
 repo = 'simeji/winresizer'
@@ -132,3 +128,35 @@ repo = 'markonm/traces.vim'
 # hook_add = '''
 # source ~/.config/nvim/plugins/nvim-notify.vim
 # '''
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/iceberg.vim
+'''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add =  '''
+source ~/.config/nvim/plugins/vim-quickrun.vim
+'''
+
+[[plugins]]
+repo = 'preservim/vimux'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+# [[plugins]]
+# repo = 'nathanaelkane/vim-indent-guides'
+# hook_add = '''
+# source ~/.config/nvim/plugins/vim-indent-guides.vim
+# '''
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-easy-align.vim
+'''
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'

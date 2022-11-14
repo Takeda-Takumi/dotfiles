@@ -1,6 +1,5 @@
 " set pastetoggle=<F3> "F3でpaste切り替え"
 
-
 " 挿入モードからjjで抜ける
 inoremap <silent> jj <ESC>
 
@@ -42,6 +41,7 @@ nnoremap <silent> [normal]< <C-w><
 nnoremap <silent> [normal]> <C-w>>
 " nnoremap <silent> [normal]cww <C-w>w
 " nnoremap <silent> [normal]cwc <C-w>c
+nnoremap <silent> [normal]bd :<C-u>bp<CR>:<C-u>bd #<CR>
 
 " [plugin]plugin - プラグインのprefix
 nmap , [plugin]
