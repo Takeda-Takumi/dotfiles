@@ -4,7 +4,8 @@ set termguicolors " True Color対応
 set title " ターミナルのタブ名に現在編集中のファイル名を設定
 set number " 行番号を表示する
 " set relativenumber " 行番号を今いる行から相対的に表示する(13ddとかするときに便利)
-set wrap " 右端まで表示される行を折り返して表示する
+" set wrap " 右端まで表示される行を折り返して表示する
+set nowrap " 右端まで表示される行を折り返して表示しない
 set showmatch " 括弧入力時の対応する括弧を表示
 set list "不可視文字(改行記号など)の可視化
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲ " デフォルト不可視文字は美しくないのでUnicodeできれいに
@@ -48,3 +49,4 @@ set viminfo= " viminfoファイルに保存しない
 " ######################## その他 ########################
 set encoding=utf-8 " 文字コードをutf-8にする
 syntax enable
+autocmd vimenter * ++nested colorscheme gruvbox
