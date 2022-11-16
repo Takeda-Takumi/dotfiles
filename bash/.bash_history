@@ -1,76 +1,3 @@
-docker compose ps
-mysql -h 127.0.0.1 -u root
-mysql -h 127.0.0.1 -u root -P 13306
-mysql -h localhost -u root -P 13306
-mysql -h localhost -u root -P 13306 -p
-mysql -h 127.0.0.1 -u root -P 13306 -p
-mysql -h 127.0.0.1 -u hoge -P 13306 -p
-docker cotainer ps
-docker container ps
-docker container exec -it league-point-db bash
-mysql -h 127.0.0.1 -u root -P 13306 -p
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-mysql -h 127.0.0.1 -u hoge@localhost -P 13306 -ppassword
-docker container ps
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword -D SF5_online_match
-mysql -h 127.0.0.1 -u root -P 13306 -p
-mysql -h localhot -u root -P 13306 -p --protocol=tcp
-mysql -h localhost -u root -P 13306 -p --protocol=tcp
-mysql -h localhost -u hoge -P 13306 -p --protocol=tcp
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp
-docker compose down -v
-docker compose up -d
-docker cotainer
-docker container
-docker container ps
-docker compose -d
-docker compose up -d
-docker container ps
-docker exec league-point-db -it bash
-docker exec -it league-point-db bash
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp
-docker compose down -v
-docker compose up -d
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp
-docker compose down -v
-docker compose up -d
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp SF5_online_match
-docker compose down -v
-docker compose up -d
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp SF5_online_match
-mysql -h localhost -u hoge -P 13306 -ppassword --protocol=tcp StreetFighter5LpGraph
-mysql -h localhost -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-docker compose ps
-docker exec league-point-db -it bash
-docker compose down -v
-docker compose up -d
-docker exec league-point-db -it bash
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-docker compose ps
-docker compose logs
-docker compose up 
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-docker compose ps
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
 docker compose up -d
 docker compose logs
 docker compose down -v
@@ -1998,3 +1925,76 @@ exit
 poetry add spica
 poetry shell
 exit
+cd dotfiles/
+git add .
+ls
+cat ~/.tmux.conf 
+mv ./tmux/.tmux ~/backup/
+ls
+ls ./tmux/
+ls ./tmux/ -la
+stow tmux -v
+git add .
+git status
+git commit -m "update"
+git push
+cd nvim/.config/
+ls
+ls -la
+ls tmux/ -la
+rm tmux/
+rm tmux/ -r
+ls
+ls -la
+git add .
+git commit -m "nvimの場所にtmuxが混じってたので消した"
+git push
+cd ..
+nvim
+stow -v tmux/
+git add .
+git commit -m "update"
+git push
+git config --global credential.helper 'cache --timeout=8035200'
+git push 
+nvim
+mkdir bash
+ls
+nvim ~/.bashrc 
+ps -ax | grep [t]mux
+ps -ax | grep [t]mux | wc 
+ps -ax | grep [t]mux | wc -l
+wc --help
+ps -ax | grep [t]mux | wc -l
+
+~/univ/discrete_algo_lab/start_gitlab.sh 
+nvim
+ls -alsfdsafdsa
+lsfdsalsfifdsafdsafsakljklfd;sjkljfdsaexit
+fdsaifdsa
+exit
+ls
+ls -a
+nvim ~/.config/
+cd dotfiles/
+ls
+stow tmux/
+ls ~/.tmux
+ls
+cd tmux/
+ls
+ls -la
+rm ~/.tmux
+ls
+tmux
+tmux
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+nvim
+exit
+tmux
+cd ./univ/discrete_algo_lab/
+./start_gitlab.sh 
+cd ~/univ/discrete_algo_lab/lgbm/
+poetry shell 
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+nvim

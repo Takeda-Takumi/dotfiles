@@ -34,7 +34,7 @@ set wildmenu "コマンドの補完を有効に
 
 " ######################## 操作 ########################
 set clipboard+=unnamedplus " クリップボードにコピーできるようにする
-set backspace=indent,eol,start " backspaceで様々な文字を消せるようにする(デフォルトだと改行文字などはbackspaceで削除できない)
+" set backspace=indent,eol,start " backspaceで様々な文字を消せるようにする(デフォルトだと改行文字などはbackspaceで削除できない)
 set hidden " タブを切り替えるときに保存していなくてもOKにする
 set textwidth=0 "自動改行する文字数
 
