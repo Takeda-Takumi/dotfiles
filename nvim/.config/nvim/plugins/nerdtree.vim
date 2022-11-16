@@ -9,3 +9,7 @@ nmap <silent> [plugin]n [NERDTree]
 
 nnoremap <silent> <C-b> :<C-u>NERDTreeToggle<CR>
 nnoremap <silent> <C-n> :<C-u>NERDTreeFocus<CR>
+
+let NERDTreeIgnore = [
+  \'__pycache__',
+  \]
