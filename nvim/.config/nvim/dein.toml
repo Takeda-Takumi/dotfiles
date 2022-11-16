@@ -160,3 +160,11 @@ source ~/.config/nvim/plugins/vim-easy-align.vim
 
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'puremourning/vimspector'
+build = "./install_gadget.py --enable-python --force-enable-noe"
+on_ft = ["python"]
+hook_add = '''
+source ~/.config/nvim/plugins/vimspector.vim
+'''
