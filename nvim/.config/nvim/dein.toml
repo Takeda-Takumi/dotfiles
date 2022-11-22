@@ -168,3 +168,11 @@ on_ft = ["python"]
 hook_add = '''
 source ~/.config/nvim/plugins/vimspector.vim
 '''
+
+# pythonのerrorformat設定
+[[plugins]]
+repo = 'aliev/vim-compiler-python'
+
+#quickfix
+[[plugins]]
+repo = 'yssl/QFEnter'
