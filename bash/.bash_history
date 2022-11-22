@@ -1,64 +1,3 @@
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose ps
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword -D StreetFighter5LpGraph online-match
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword online-match
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-docker compose up -d
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose ps
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword
-docker compose down -v
-docker compose up -d
-docker compose logs
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword online_match
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-docker compose down -v
-docker compose up -d
-docker compose logs
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-git add .
-git commit
-git push --set-upstream origin feature/createDB
-/usr/bin/python3
-docker volume ls
-git checkout main
-git pull
-git checkout -b feature/showLPGraph
-python3 main/show_lp_graph.py 
-pip install MySQLdb
-pip install MySQL-Python
-sudo apt-get install python-dev default-libmysqlclient-dev
 sudo apt-get install python3-dev
 pip install mysqlclient
 python3 main/show_lp_graph.py 
@@ -1998,3 +1937,64 @@ cd ~/univ/discrete_algo_lab/lgbm/
 poetry shell 
 . /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
 nvim
+cd ~/univ/discrete_algo_lab/lgbm/
+poetry shell
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+nvim
+cd ~/dotfiles/
+git pull
+ls
+cat install.sh
+cat installer.sh 
+git rm --cached installer.sh 
+ls
+git ls-files
+rm installer.sh 
+git add .
+git commit -m "deinのinstallerの削除"
+git push
+git config --global credential.helper 'cache timeout=8035200'
+git push
+nvim
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+python run.py 
+nvim
+rm /home/takeda/.cache/dein/.cache/init.vim/.dein/plugin/auto-pairs.vim
+kill %1
+nvim
+ls
+nvim debug.log 
+nvim
+cd ..
+rm debug1.log 
+nvim
+nvim debug1.log 
+nvim
+exit
+poetry shell
+exit
+mkdir test
+cd test/
+ls
+mkdir 2
+cd 2
+cd ..
+cd .
+cd ..
+cd test/
+nvim
+cd 2
+ls
+python kyujin.py 
+python3 kyujin.py 
+exit
+pyenv shell 3.11.0
+seq 99999999 | tqdm --bytes | wc -l
+sudo apt intall python3-tqdm
+sudo apt install python3-tqdm
+seq 99999999 | tqdm --bytes | wc -l
+tmux
+fzf
+cd univ/discrete_algo_lab/lgbm/
+cd ..
+./start_gitlab.sh 
