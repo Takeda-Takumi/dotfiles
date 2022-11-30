@@ -1,1 +1,2 @@
 wincmd J
+set nobuflisted

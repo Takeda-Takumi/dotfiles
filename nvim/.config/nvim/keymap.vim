@@ -1,7 +1,7 @@
 " set pastetoggle=<F3> "F3でpaste切り替え"
 
 " 挿入モードからjjで抜ける
-inoremap <silent> jj <ESC>
+" inoremap <silent> jj <ESC>
 
 " バッファの移動
 nnoremap <silent> [b :bprevious<CR>

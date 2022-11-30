@@ -1,283 +1,3 @@
-sudo apt-get install python3-dev
-pip install mysqlclient
-python3 main/show_lp_graph.py 
-git add .
-git commit 
-python3 main/show_lp_graph.py 
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-python3 main/show_lp_graph.py 
-mysql -h 127.0.0.1 -u hoge -P 13306 -ppassword StreetFighter5LpGraph
-python3 main/show_lp_graph.py 
-git add .
-git commit
-git push
-pip install matplotlib
-python3 main/show_lp_graph.py 
-$ export DISPLAY=:0
-export DISPLAY=:0
-python3 main/show_lp_graph.py 
-sudo apt install python3-tkinter
-sudo apt install python3-tk
-python3 main/show_lp_graph.py 
-$ pip install matplotlib
-pip install matplotlib
-pip install matplotlib --upgrade
-echo $DISPLAY
-python3 main/show_lp_graph.py 
-python3 main/display_lp_graph.py 
-sudo apt-get install python3-tk
-python3 main/display_lp_graph.py 
-echo $DISPLAY
-exporot $DISPLAY=:0
-export $DISPLAY=:0
-export DISPLAY=:0
-echo $DISPLAY
-python3 main/display_lp_graph.py 
-sudo apt install python3-tk
-sudo apt install python3.8-tk
-code ~/.bashrc
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-py main/display_lp_graph.py 
-docker compose up
-sudo service satart docker
-start docker
-service docker start
-sudo service docker start
-docker compose up
-docker compose up -d
-python3 main/display_lp_graph.py 
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-echo $DISPLAY
-. ~/.bashrc
-echo $DISPLAY
-python3 main/display_lp_graph.py 
-echo $DISPLAY
-python3 main/display_lp_graph.py 
-cat /etc/resolv.conf
-echo $DISPLAY
-sudo apt-get update && sudo apt-get install x11-apps
-xcalc
-python3 --version
-sudo apt-get install python3.8-tk
-xcalc --help
-python3 main/display_lp_graph.py 
-. ~/bashrc
-. ~/.bashrc
-python3 main/display_lp_graph.py 
-echo $DISPLAY 
-echo $DISPLAY
-python3 main/display_lp_graph.py 
-docker compose up -d
-service start docker
-sudo service start docker
-service docker start
-sudo service docker start
-python3 main/display_lp_graph.py 
-docker compose up -d
-python3 main/display_lp_graph.py 
-git add .
-git commit
-git push -set-upstream origin feature/showLPGraph 
-git push --set-upstream origin feature/showLPGraph 
-git add .
-git commit
-git push
-git add .
-git commit
-git push
-git checkout main 
-git pull
-8b0:   55                      push   %ebp
-nc ctfq.u1tramarine.blue 10023
-nc ctfq.u1tramarine.blue 10023
-ncat --ssl ctfq.u1tramarine.blue 20023
-sudo apt install ncat
-ncat --ssl ctfq.u1tramarine.blue 20023
-file villager 
-file libc.so.6
-lld villager 
-sudo apt install lld
-lld villager 
-ldd
-ldd villager 
-ldd libc.so.6
-file villager 
-strings villager 
-file libc.so.6
-file villager 
-/lib/ld-linux.so.2 villager 
-/lib/ld-linux.so.2
-libc.so.6 villager 
-./libc.so.6 villager 
-./libc.so.6 
-ls
-ls -l
-chomod 777 libc.so.6
-chmod 777 libc.so.6
-ls -l
-./libc.so.6 
-./libc.so.6 villager 
-./libc.so.6 
-ls -la
-chmod 777 villager 
-ls
-./villager 
-strings villager 
-strings libc.so.6
-od libc.so.6
-readelf villager 
-readelf villager -h
-readelf villager -l\
-od -d villager 
-objdump -S villager 
-8b0:   55                      push   %ebp
-strings villager
-gdb villager 
-sudo apt install gdb
-gdb villager
-./make.bat 
-chomod +x ./make.bat 
-chmod +x ./make.bat 
-./make.bat 
-lcc
-make
-./make.bat 
-echo $PATH
-lcc
-./make.bat
-/mnt/c/Users/takumi/gameboy/gbdk-win/gbdk/bin/lcc.exe 
-/mnt/c/Users/takumi/gameboy/gbdk-win/gbdk/bin/lcc.exe -Wa-l -Wl-m -Wl-j -o gazou.gb gazou.c
-lcc
-PATH/lcc
-PATH/lcc.exe
-lcc.exe
-./make.bat 
-/mnt/c/Users/takumi/gameboy/gbdk-win/gbdk/bin/lcc.exe -Wa-l -Wl-m -Wl-j -o gazou.gb gazou.c
-cd ksnctf/23/
-ls
-gdb villager
-vim ~/.gbdinit
-cd ksnctf/23/
-gdb villager
-cd ksnctf/23/
-wget https://ksnctf.sweetduet.info/q/23/villager
-ls
-cat villager.1
-ls -al
-chmod +x villager.1
-ls -al
-gdb villager.1
-cat /home/takeda/ksnctf/23/villager.1
-exit
-cd ksnctf/23/
-gdb villager
-vim ~/.gbdinit
-mv ~/.gbdinit ~/.gdbinit
-gdb villager
-ls
-ls -la
-gdb villager
-chmod +x villager
-ls
-gdb villager
-wget http://ksnctf.sweetduet.info/problem/23
-ls
-cd 23
-ls
-cat 23
-rm 23 
-ls
-gdb villager
-dir
-dir /usr/src/debug
-./villager
-cat villager
-exit
-ls
-readelf -l villager | grep interpreter
-gdb villager -interpreter=./libc.so.6
-sudo dpkg --add-architecture i386
-sudo apt-get update
-./villager
-ls -la
-./villager.1
-cd ksnctf/2
-cd ksnctf/23/
-ls
-readelf villager
-readelf -a villager
-fifjffdsa
-file villager
-apt-get install lib32z1aakaexit
-apt-get install lib32z1
-sudo apt-get install lib32z1
-ldd villager
-sudo apt-get install lib32stdc++6
-ldd villager
-cd ksnctf/23/
-./villager
-objdump -d -M intel ./villager
-gdb villager
-nc ctfq.u1tramarine.blue 10023
-readelf -a libc.so.6 
-readelf --help
-readelf -h libc.so.6 
-readelf -l libc.so.6 
-readelf -S libc.so.6 
-readelf -a libc.so.6 | grep __libc
-python3 exploit2.py pwrite
-python3 exploit2.py 0xffffcd8c 0x120 0xf7de0000 7
-TypeError: 'map' object is not subscriptable
-TypeError: 'map' object is not subscriptable cd /home/takeda/ksnctf/23 ; /usr/bin/env /usr/bin/python3 /home/takeda/.vscode-server/extensions/ms-python.python-2022.17.12941045/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 46453 -- /home/takeda/ksnctf/23/exploit2.py 0xffffcd8c 0x120 0xf7de0000 7 
-python3 exploit2.py 0xffffcd8c 0x120 0xf7de0000 7
-python3 exploit2.py 0xffffcd8c 0x120 0xf7ad1000 7
-./villager AAAA
-echo AAAA | ./villager
-echo $'\xf1\x58\x55\56%13c%7$n' | ./villager
-echo $'\xf1\x58\x55\56' | ./villager
-echo $'\xf1\x58\x55\56,%p,%p,%p,%p,%p,' | ./villager
-echo $'\xf1\x58\x55\56,%p,%p,%p,%p,%p,%p,%p' | ./villager
-echo $'\xf1\x58\x55\56,%p,%p,%p,%p,%p,%p,%p,%p' | ./villager
-echo $'\xf2\x58\x55\56,%p,%p,%p,%p,%p,%p,%p,%p' | ./villager
-echo $'\xf1\x58\x55\x56,%p,%p,%p,%p,%p,%p,%p,%p' | ./villager
-echo $'\xf1\x58\x55\x56%7$p' | ./villager
-echo $'\xf1\x58\x55\x56%7$n' | ./villager
-echo $'\xf1\x58\x55\x56%1448433648x%7$n' | ./villager
-ssh q4@ctfq.u1tramarine.blue -p 10004
-nc ctfq.u1tramarine.blue 10023
-./villager 
-./villager AAAA
-printf("A")
-printf("A");
-printf
-man printf
-print "A"
-print --help
-printf --help
-printf "A"
-printf "%x, " {10}
-printf "%x, " {..10}
-$(python -c "print("%x"*10)"
-$(python -c "print("%x"*10)
-exit
-$(python -c "print("%x"*10)")
-$(python -c "print(\"%x\"*10)")
-AAAA$(python -c "print(\"%x\"*10)")
-echot "AAAA$(python -c "print(\"%x\"*10)")"
-echo "AAAA$(python -c "print(\"%x\"*10)")"
-echo "AAAA$(python -c "print(\"%x\, "*10)")"
-echo "AAAA$(python -c "print(\"%x\\,"*10)")"
-echo "AAAA$(python -c "print(\"%x\,\"*10)")"
-echo "AAAA$(python -c "print(\"%x,\"*10)")"
-"AAAA$(python -c "print(\"%x,\"*10)")"
 echo "AAAA$(python -c "print(\"%x,\"*100)")"
 echo "AAAA$(python -c "print(\"%x,\"*100)"+"\\n")"
 echo "AAAA$(python -c "print(\"%x,\"*100)"+\"\\n\")"
@@ -1998,3 +1718,283 @@ fzf
 cd univ/discrete_algo_lab/lgbm/
 cd ..
 ./start_gitlab.sh 
+cd ~/univ/discrete_algo_lab/lgbm/
+nvim
+git add .
+git commit -m "update"
+git push
+cd ~/dotfiles/
+git add .
+git commit -m "update"
+git push
+cd ~/univ/discrete_algo_lab/lgbm/
+poetry shell
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+nvim
+cd ~/prog/atcoder/
+acc new abc
+acc new abc278
+cd a
+cd ./abc278/a/
+ls
+nvim a.cpp
+oj t
+ls
+oj t
+ls
+g++ a.cpp 
+oj t
+oj --help
+oj t --help
+oj -t -d ./tests
+oj -t -d tests
+oj t -d tests
+g++ a.cpp 
+oj t -d tests
+g++ a.cpp 
+oj t -d tests
+g++ a.cpp 
+oj t -d tests
+g++ a.cpp 
+oj t -d tests
+g++ a.cpp 
+oj t -d tests
+exit
+cd dotfiles/
+git pull
+nvim
+fg
+nvim
+cd ~/.cache/dein/repos/github.com/Shougo/vimproc.vim/
+make
+fg
+nvim
+acc templates
+cd acc config-dir
+cd `acc config-dir`
+ls
+mkdir cpp
+ls
+cd cpp
+nvim
+nvi
+nvim
+nvim'
+nvim
+nvim
+exit
+exit
+acc new abc278 --template cpp
+acc add 
+cd abc278/
+acc add
+tmux list-keys
+tmux list-keys | grep C-j
+cat ~/.tmux
+ls ~/.tmux/ -a
+ls ~/.tmux/ -al
+cat ~/.tmux.conf 
+for i in {0..255}; do     printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"; done
+nvim
+exit
+tmux
+#!/bin/bash
+# Based on: https://gist.github.com/XVilka/8346728
+awk -v term_cols="${width:-$(tput cols || echo 80)}" 'BEGIN{
+    s="/\\";
+    for (colnum = 0; colnum<term_cols; colnum++) {
+        r = 255-(colnum*255/term_cols);
+        g = (colnum*510/term_cols);
+        b = (colnum*255/term_cols);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm", r,g,b;
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+        printf "%s\033[0m", substr(s,colnum%2+1,1);
+    }
+    printf "\n";
+}'
+#!/bin/bash
+# Based on: https://gist.github.com/XVilka/8346728 and https://unix.stackexchange.com/a/404415/395213
+awk -v term_cols="${width:-$(tput cols || echo 80)}" -v term_lines="${height:-1}" 'BEGIN{
+    s="/\\";
+    total_cols=term_cols*term_lines;
+    for (colnum = 0; colnum<total_cols; colnum++) {
+        r = 255-(colnum*255/total_cols);
+        g = (colnum*510/total_cols);
+        b = (colnum*255/total_cols);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm", r,g,b;
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+        printf "%s\033[0m", substr(s,colnum%2+1,1);
+        if (colnum%term_cols==term_cols) printf "\n";
+    }
+    printf "\n";
+}'
+nvim
+node -v
+n -v
+n
+n --version
+n install 10
+sudo n install 10
+n list
+n
+nvim
+n
+nvim
+node --version
+sudo n
+nvim
+find | fzf
+cd ~/.config/nvim/
+ls -la
+find | fzf
+cd plugins/
+ls
+cd ~/
+find | fzf
+nvim .vimspector.json 
+nvim
+cd !
+cd ~
+find | fzf
+nvim .vimspector.json 
+nvim
+nvimm
+nvim
+cd ~/dotfiles/
+stow -v nvim/
+fg
+node --version
+fg
+$ ./install_gadget.py --basedir ~/.config/vimspector-config --all --force-all
+./install_gadget.py --basedir ~/.config/vimspector-config --all --force-all
+exit
+tmux
+exit
+pyenv shell 3.11.0
+nvim
+ls
+ls -l
+rm test -r
+ls
+ls -l
+fg
+nvim
+cd ./dotfiles/
+cd nvim/
+fg
+cd .config/
+ls
+stow -v -D vimspector-config/
+ls ~/
+ls ~/.config/
+ls ~/.config/ -ls
+ls
+ls vimspector-config/
+stow -h
+cd ..
+stow -vv -D nvim/
+ls -la
+ls ~/ -la
+ls ~/.config/
+fg
+ls
+stow -vv nvim/
+fg
+nvim
+stow -h
+stow -R -vv nvim/
+fg
+nvim
+cd nvim/.vim/
+ls
+cd ..
+rm ls
+ls
+ls =a
+ls -a
+rm -r .vim
+ls -a
+cd ..
+stow -vv -R nvim/
+ls ~/
+ls ~/ -la
+ls ~/.vim -la
+stow -vv -D nvim/
+stow -vv nvim
+ls ~/.vim -la
+ls ~/.vim/settings/
+ls ~/.vim/settings/ -la
+rm -f ~/.vim
+rm -f ~/.vim/
+rm -r ~/.vim/
+fg
+nvim
+ls -la
+stow -D ~
+stow -D 
+stow -D '~'
+stow -D '~' -vv
+ls ./'~'/
+ls ./nvim/
+ls
+cd 
+cd '~'
+ls
+cd dotfiles/
+ls
+ls nvim
+ls nvim -la
+cd ./.config
+cd nvim/.config/
+ls
+ls -la
+cd ..
+cd ~/dotfiles/
+ls
+cd nvim/.config/
+ls
+cd nvim/
+ls
+cd ~/dotfiles/
+rm ./'~' -r
+ls
+exit
+tmux
+nvim
+cd dotfiles/
+ls
+stow -vv -R nvim/
+fg
+ls /home/takeda/.config/vimspector-config
+nvim
+ls /home/takeda/.config/vimspector-config/configurations/
+kill %1
+nvim
+ls
+pwd
+stow -R -vvv nvim/
+ls ~/ -la
+ls ~/ -la | .vim
+ls ~/ -la | grep .vim
+fg
+nvim
+cd ~/univ/discrete_algo_lab/lgbm/
+poetry shell
+. /home/takeda/.cache/pypoetry/virtualenvs/lgbm-J7OgDtw3-py3.10/bin/activate
+nvim
+ifdsa
+fdsa
+tmux list-keys
+tmux list-keys | grep C-tmux list-keys 
+tmux list-keys 
+nvim
+tmux
+cd ~/.c
+cd ~/.cache/dein/repos/github.com/puremourning/vimspector/
+ls
+ls -l
+cd ./configurations/
+ls -l
+ln --help

@@ -158,16 +158,18 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-easy-align.vim
 '''
 
-[[plugins]]
-repo = 'christoomey/vim-tmux-navigator'
+# [[plugins]]
+# repo = 'christoomey/vim-tmux-navigator'
 
 [[plugins]]
 repo = 'puremourning/vimspector'
-build = "./install_gadget.py --enable-python --force-enable-noe"
-on_ft = ["python"]
+build = "./install_gadget.py --enable-python"
 hook_add = '''
 source ~/.config/nvim/plugins/vimspector.vim
 '''
+# hook_source = '''
+# let g:vimspector_enable_mapping = 'VISUAL_STUDIO'
+# '''
 
 # pythonのerrorformat設定
 [[plugins]]
@@ -176,3 +178,62 @@ repo = 'aliev/vim-compiler-python'
 #quickfix
 [[plugins]]
 repo = 'yssl/QFEnter'
+
+[[plugins]]
+repo = 'haya14busa/vim-asterisk'
+hook_add =  '''
+source ~/.config/nvim/plugins/vim-asterisk.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'kevinhwang91/nvim-bqf'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+# [[plugins]]
+# repo = 'dense-analysis/ale'
+# hook_source = '''
+# let g:ale_disable_lsp = 1
+# '''
+
+# color
+[[plugins]]
+repo = 'flazz/vim-colorschemes'
+# color
+[[plugins]]
+repo = 'sainnhe/everforest'
+hook_add = '''
+source ~/.config/nvim/plugins/everforest.vim
+'''
+# color
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+hook_add = '''
+source ~/.config/nvim/plugins/ayu-vim.vim
+'''
+
+[[plugins]]
+repo = 'skywind3000/asynctasks.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/asynctasks.vim
+'''
+[[plugins]]
+repo = 'skywind3000/asyncrun.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/asyncrun.vim
+'''
+
+# color
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'vim-test/vim-test'
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
