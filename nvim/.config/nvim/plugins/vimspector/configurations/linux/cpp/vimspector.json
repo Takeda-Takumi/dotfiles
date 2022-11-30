@@ -1,0 +1,31 @@
+{
+  "configurations": {
+    "Launch": {
+      "adapter": "vscode-cpptools",
+      "filetypes": ["cpp"],
+      "configuration": {
+        "request": "launch",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
+        "args": ["*${CommandLineArgs}"],
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb"
+      },
+      "breakpoints": {
+        "exception": {
+          "all": "N"
+        }
+      }
+    },
+    "Attach": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ],
+      "configuration": {
+        "request": "attach",
+        "program": "<path to binary>",
+        "MIMode": "<lldb or gdb>"
+      }
+    }
+  }
+}

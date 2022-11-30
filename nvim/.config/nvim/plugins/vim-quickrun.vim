@@ -1,5 +1,6 @@
  let g:quickrun_config = {
             \"_":{
+                \'runner': 'vimproc',
                 \"outputter" : "error",
                 \"outputter/error/success": "buffer",
                 \"outputter/error/error": "quickfix",
