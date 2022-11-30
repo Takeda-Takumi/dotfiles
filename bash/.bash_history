@@ -1,4 +1,3 @@
-echo "AAAA$(python -c "print(\"%x,\"*100)")"
 echo "AAAA$(python -c "print(\"%x,\"*100)"+"\\n")"
 echo "AAAA$(python -c "print(\"%x,\"*100)"+\"\\n\")"
 echo "AAAA, $(python -c "print(\"%x,\"*100)"+\"\\n\")"
@@ -1998,3 +1997,4 @@ ls -l
 cd ./configurations/
 ls -l
 ln --help
+nvim
