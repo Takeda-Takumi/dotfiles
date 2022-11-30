@@ -1,0 +1,1 @@
+let g:ayucolor = "light"

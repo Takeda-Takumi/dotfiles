@@ -1,6 +1,10 @@
 
 " ######################## 見た目 ########################
-set termguicolors " True Color対応
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 set title " ターミナルのタブ名に現在編集中のファイル名を設定
 set number " 行番号を表示する
 " set relativenumber " 行番号を今いる行から相対的に表示する(13ddとかするときに便利)
@@ -11,12 +15,12 @@ set list "不可視文字(改行記号など)の可視化
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲ " デフォルト不可視文字は美しくないのでUnicodeできれいに
 set matchtime=3 " 対応括弧のハイライト表示を3sにする
 
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
+" highlight Cursor guifg=white guibg=black
+" highlight iCursor guifg=white guibg=steelblue
+" set guicursor=n-v-c:block-Cursor
+" set guicursor+=i:ver100-iCursor
+" set guicursor+=n-v-c:blinkon0
+" set guicursor+=i:blinkwait10
 
 " ######################## 検索・置換 ########################
 
@@ -56,4 +60,4 @@ set viminfo= " viminfoファイルに保存しない
 " ######################## その他 ########################
 set encoding=utf-8 " 文字コードをutf-8にする
 syntax enable
-autocmd vimenter * ++nested colorscheme gruvbox
+autocmd vimenter * ++nested colorscheme everforest
