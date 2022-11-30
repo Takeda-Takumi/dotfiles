@@ -163,10 +163,14 @@ source ~/.config/nvim/plugins/vim-easy-align.vim
 
 [[plugins]]
 repo = 'puremourning/vimspector'
-build = "./install_gadget.py --enable-python"
+build = '''
+./install_gadget.py --all &&
+ln -s -T ~/.config/nvim/plugins/vimspector/configurations/ ~/.cache/dein/repos/github.com/puremourning/vimspector/configurations
+'''
 hook_add = '''
 source ~/.config/nvim/plugins/vimspector.vim
 '''
+
 # hook_source = '''
 # let g:vimspector_enable_mapping = 'VISUAL_STUDIO'
 # '''
