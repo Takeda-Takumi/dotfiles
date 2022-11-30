@@ -27,5 +27,6 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
+  "snippets.ultisnips.pythonPrompt": false,
   // "diagnostic.displayByAle": true
 }

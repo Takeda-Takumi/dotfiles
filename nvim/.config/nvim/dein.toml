@@ -11,11 +11,10 @@ source ~/.config/nvim/plugins/auto-pairs.vim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-build = 'coc#utilinstall()'
+build = 'yarn install --frozen-lockfile'
 hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
-on_source = 'lexima.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -23,6 +22,8 @@ depends = ['ryanoasis/vim-devicons']
 hook_add = '''
 source ~/.config/nvim/plugins/nerdtree.vim
 '''
+# mac
+#  ln -svF ~/.config/nvim/plugins/vimspector/configurations/ ~/.cache/dein/repos/github.com/puremourning/vimspector/configuration
 
 # ファイラー
 # [[plugins]]
@@ -164,16 +165,11 @@ source ~/.config/nvim/plugins/vim-easy-align.vim
 [[plugins]]
 repo = 'puremourning/vimspector'
 build = '''
-./install_gadget.py --all &&
-ln -s -T ~/.config/nvim/plugins/vimspector/configurations/ ~/.cache/dein/repos/github.com/puremourning/vimspector/configurations
+./install_gadget.py --all
 '''
 hook_add = '''
 source ~/.config/nvim/plugins/vimspector.vim
 '''
-
-# hook_source = '''
-# let g:vimspector_enable_mapping = 'VISUAL_STUDIO'
-# '''
 
 # pythonのerrorformat設定
 [[plugins]]
