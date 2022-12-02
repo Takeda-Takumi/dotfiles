@@ -237,3 +237,9 @@ repo = 'vim-test/vim-test'
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'mg979/vim-visual-multi'
