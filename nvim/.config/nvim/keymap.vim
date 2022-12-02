@@ -21,6 +21,12 @@ nnoremap L $
 nnoremap ; :
 nnoremap : ;
 
+" 表示行移動
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
 " [normal] - 標準コマンドのprefix
 " Ctrl, Shift系
 nmap <Space> [normal]
