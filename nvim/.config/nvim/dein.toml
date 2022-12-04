@@ -243,3 +243,9 @@ repo = 'easymotion/vim-easymotion'
 
 [[plugins]]
 repo = 'mg979/vim-visual-multi'
+
+[[plugins]]
+repo = 'lervag/vimtex'
+hook_add = '''
+source ~/.config/nvim/plugins/vimtex.vim
+'''
