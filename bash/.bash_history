@@ -1,37 +1,3 @@
-echo "AAAA$(python -c "print(\"%x,\"*100)"+"\\n")"
-echo "AAAA$(python -c "print(\"%x,\"*100)"+\"\\n\")"
-echo "AAAA, $(python -c "print(\"%x,\"*100)"+\"\\n\")"
-echo "AAAA,$(python -c "print(\"%x,\"*100)"+\"\\n\")"
-python -c "ord('%')"
-python -c "print(ord('%'))"
-python -c "print(chr('2c'))"
-python -c "print(chr(0x2c))"
-python -c "print(chr(0x78))"
-echo "AAAA,$(python -c "print(\"%p,\"*100)"+\"\\n\")"
-echo $'\xf1\x58\x55\56%13c%7$n'
-echo $'\xf1\x58\x55\56'
-python -c "print(int(0x565557f0))"
-./villager 
-nm
-nm -D libc.so.6 
-nm -D libc.so.6 | grep system
-$(python -V)
-objdump -d libc.so.6 
-objdump -d libc.so.6 | grep __libc_start_main
-$(python int(0003fe70 - 0001a470))
-$(python -e int(0003fe70 - 0001a470))
-python -e "int(0003fe70 - 0001a470)"
-python -c "int(0003fe70 - 0001a470)"
-python -c "int(0x0003fe70 - 0x0001a470)"
-python -c "int(0x0003fe70 - 0x0001a470)" | -
-python -c "int(0x0003fe70 - 0x0001a470)" | cat -
-python -c "print(int(0x0003fe70 - 0x0001a470))" 
-gbd -q -ex 
-gdb -q -ex 
-gdb -q -ex "1-2"
-gdb -q -ex "p/x 0x1"
-gdb -q -ex --batch "p/x 0x1"
-gdb -q -ex -batch "p/x 0x1"
 gdb -q -batch -ex "p/x 0x1"
 gdb -q -batch -ex "x 0x1"
 gdb -q -batch -ex "p 0x1"
@@ -1998,3 +1964,37 @@ cd ./configurations/
 ls -l
 ln --help
 nvim
+pyenv shell 3.11.0
+python3 kyujin.py 
+python kyujin.py 
+python3 kyujin.py 
+pyenv shell 3.11.0
+python3 kyujin.py 
+nvim
+tmux
+pyenv shell 3.11.0
+cd ./.cache/dein/repos/github.com/puremourning/vimspector/
+ls
+rm configurations/
+rm configurations/ -r
+ls
+ln -s ~/.config/nvim/plugins/vimspector/configurations/ $(pwd)/configurations/
+ln -s -T ~/.config/nvim/plugins/vimspector/configurations/ $(pwd)/configurations/
+ln -s -T ~/.config/nvim/plugins/vimspector/configurations/ $(pwd)/configurations
+./install_gadget.py --all -help
+./install_gadget.py -h
+./install_gadget.py --all
+ln -s ~/.config/nvim/plugins/vimspector/configurations/ $(pwd)/configurations
+rm ./configurations
+ls
+ls -l
+ln -s ~/.config/nvim/plugins/vimspector/configurations/ $(pwd)/configuration
+ls -l
+pyenv shell 3.11.0
+cd 3
+ls
+cd 3/
+ls
+python3 test.py 
+cat test.py 
+python3 test.py 
