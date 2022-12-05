@@ -27,28 +27,28 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" [normal] - 標準コマンドのprefix
+" (normal) - 標準コマンドのprefix
 " Ctrl, Shift系
-nmap <Space> [normal]
-nnoremap [normal] <nop>
-nnoremap <silent> [normal]s :<C-u>source $MYVIMRC<CR>
-nnoremap <silent> [normal]w :<C-u>write<CR>
-nnoremap <silent> [normal]q :<C-u>quit<CR>
-nnoremap <silent> [normal]Q :<C-u>quit!<CR>
-nnoremap <silent> [normal]h <C-w>h
-nnoremap <silent> [normal]j <C-w>j
-nnoremap <silent> [normal]k <C-w>k
-nnoremap <silent> [normal]l <C-w>l
-nnoremap <silent> [normal]cw <C-w>c
-nnoremap <silent> [normal]= <C-w>=
-nnoremap <silent> [normal]+ <C-w>+
-nnoremap <silent> [normal]- <C-w>-
-nnoremap <silent> [normal]< <C-w><
-nnoremap <silent> [normal]> <C-w>>
+" 2022/12/05 prefixを[normal]から(normal)に変更
+" [normal]は[nのkeybindに干渉するため
+nnoremap (normal) <nop>
+nmap <Space> (normal)
+nnoremap <silent> (normal)s :<C-u>source $MYVIMRC<CR>
+nnoremap <silent> (normal)w :<C-u>write<CR>
+nnoremap <silent> (normal)q :<C-u>quit<CR>
+nnoremap <silent> (normal)Q :<C-u>quit!<CR>
+nnoremap <silent> (normal)h <C-w>h
+nnoremap <silent> (normal)j <C-w>j
+nnoremap <silent> (normal)k <C-w>k
+nnoremap <silent> (normal)l <C-w>l
+nnoremap <silent> (normal)cw <C-w>c
+nnoremap <silent> (normal)= <C-w>=
+nnoremap <silent> (normal)+ <C-w>+
+nnoremap <silent> (normal)- <C-w>-
+nnoremap <silent> (normal)< <C-w><
+nnoremap <silent> (normal)> <C-w>>
 " nnoremap <silent> [normal]cww <C-w>w
 " nnoremap <silent> [normal]cwc <C-w>c
 nnoremap <silent> [normal]bd :<C-u>bp<CR>:<C-u>bd #<CR>
 
-" [plugin]plugin - プラグインのprefix
-nmap , [plugin]
-nnoremap [plugin] <nop>
+let maplocalleader = ","

