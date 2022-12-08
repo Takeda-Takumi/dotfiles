@@ -11,7 +11,12 @@ if has('win32')
 endif
 " let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 let g:vimtex_compiler_latexmk = {
+      \ 'build_dir': '',
       \ 'executable': 'latexmk',
       \ 'options': [
       \ ],
       \}
+
+augroup vimtex_config
+  autocmd User VimtexEventInitPost VimtexCompile
+augroup END
