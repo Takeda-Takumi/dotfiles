@@ -49,6 +49,6 @@ nnoremap <silent> (normal)< <C-w><
 nnoremap <silent> (normal)> <C-w>>
 " nnoremap <silent> [normal]cww <C-w>w
 " nnoremap <silent> [normal]cwc <C-w>c
-nnoremap <silent> [normal]bd :<C-u>bp<CR>:<C-u>bd #<CR>
+nnoremap <silent> (normal)bd :<C-u>bp<CR>:<C-u>bd #<CR>
 
 let maplocalleader = ","
