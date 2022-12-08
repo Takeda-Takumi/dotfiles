@@ -47,6 +47,7 @@ let g:coc_global_extensions = [
       \'coc-clangd',
       \'coc-vimlsp',
       \'coc-snippets',
+      \'coc-vimtex',
       \]
 
 " Use <C-l> for trigger snippet expand.
