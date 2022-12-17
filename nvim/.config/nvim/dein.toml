@@ -16,21 +16,46 @@ hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-depends = ['ryanoasis/vim-devicons']
-hook_add = '''
-source ~/.config/nvim/plugins/nerdtree.vim
-'''
-# mac
-#  ln -svF ~/.config/nvim/plugins/vimspector/configurations/ ~/.cache/dein/repos/github.com/puremourning/vimspector/configuration
+# [[plugins]]
+# repo = 'scrooloose/nerdtree'
+# depends = ['ryanoasis/vim-devicons']
+# hook_add = '''
+# source ~/.config/nvim/plugins/nerdtree.vim
+# '''
 
 # ファイラー
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/fern.vim
+'''
+# fern plugins >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[[plugins]]
+repo = 'lambdalisue/fern-bookmark.vim'
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+depends = ['fern.vim', 'nerdfont.vim']
+
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'LumaKernel/fern-mapping-fzf.vim'
+depends = ['fern.vim', 'fzf']
+
 # [[plugins]]
-# repo = 'lambdalisue/fern.vim'
-# hook_add = '''
-# source ~/.config/nvim/plugins/fern.vim
-# '''
+# repo = ''
+# depends = ['fern.vim']
+# fern plugins <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # gruvboxのデザイン
 [[plugins]]
@@ -252,3 +277,6 @@ repo = 'lervag/vimtex'
 hook_add = '''
 source ~/.config/nvim/plugins/vimtex.vim
 '''
+
+# [[plugins]]
+# repo = 'unblevable/quick-scope'
