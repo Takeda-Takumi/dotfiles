@@ -40,7 +40,7 @@ nnoremap <silent> <C-f> :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
 let g:fern#default_hidden = 1
 
 " fern-bookmark.vim
-let g:fern#scheme#bookmark#store#file = "~/.config/nvim/plugins/fern/bookmark.json"
+" let g:fern#scheme#bookmark#store#file = "~/.config/nvim/plugins/fern/bookmark.json"
 
 " fern-renderer-nerdfont.vim
 let g:fern#renderer = "nerdfont"
