@@ -1,4 +1,4 @@
-
+echo "start .bashrc"
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -150,18 +150,30 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export GBDKDIR=$HOME/gbdk/
 
+
+
+# 子ペインでも仮想環境をactivate
+if [ -n "$TMUX" ] && [ -n "$DIRENV_DIR" ]; then
+    unset "${!DIRENV_@}"  # unset env vars starting with DIRENV_
+fi
+eval "$(direnv hook bash)"
+
 # auto start tmux
 tmux_count=$(ps -ax | grep '[t]mux' | wc -l)
-echo "tmux"
 if test $tmux_count -eq 0; then
-    echo "tmux"
     echo `tmux`
 elif test $tmux_count -eq 1; then
-    echo "tumx a"
     echo `tmux a`
 fi
 
-	
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+export -f show_virtual_env
+PS1='$(show_virtual_env)'$PS1
+
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 # export DISPLAY=`hostname`.mshome.net:0.0
 
