@@ -1,4 +1,6 @@
 function! s:init_fern() abort
+  nnoremap <buffer> <silent> <C-f> <C-^>
+
   " Open bookmark:///
   nnoremap <buffer><silent>
         \ <Plug>(fern-my-enter-bookmark)
