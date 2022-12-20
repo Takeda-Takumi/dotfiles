@@ -41,6 +41,12 @@ nnoremap <silent> <C-f> :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
 
 let g:fern#default_hidden = 1
 
+" Add dirs and files inside the brackets that need to remain hidden
+let hide_dirs  = '^\%(' . '\.git' . '\|' . 'node_modules' . '\|' . '__pycache__' . '\)$'  " here you write the dir names 
+let hide_files = '\%(\.byebug\|\.ruby-\)\+'    " here you write the file names
+
+let g:fern#default_exclude = hide_dirs . '\|' . hide_files  " here you exclude them
+
 " fern-bookmark.vim
 " let g:fern#scheme#bookmark#store#file = "~/.config/nvim/plugins/fern/bookmark.json"
 
