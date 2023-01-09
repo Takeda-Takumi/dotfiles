@@ -42,7 +42,7 @@ nnoremap <silent> <C-f> :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
 let g:fern#default_hidden = 1
 
 " Add dirs and files inside the brackets that need to remain hidden
-let hide_dirs  = '^\%(' . '\.git' . '\|' . 'node_modules' . '\|' . '__pycache__' . '\)$'  " here you write the dir names 
+let hide_dirs  = '^\%(' . '\.git' . '\|' . 'node_modules' . '\|' . '__pycache__' . '\|'. '\.DS_Store' . '\)$'  " here you write the dir names 
 let hide_files = '\%(\.byebug\|\.ruby-\)\+'    " here you write the file names
 
 let g:fern#default_exclude = hide_dirs . '\|' . hide_files  " here you exclude them

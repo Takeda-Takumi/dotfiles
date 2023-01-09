@@ -140,8 +140,11 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
-hook_post_update = '''
+build = '''
 sh -c "cd app && yarn install"
+'''
+source = '''
+source ~/.config/nvim/plugins/markdown-preview.vim
 '''
 
 # 置換をプレビュー
@@ -280,3 +283,12 @@ source ~/.config/nvim/plugins/vimtex.vim
 
 # [[plugins]]
 # repo = 'unblevable/quick-scope'
+
+[[plugins]]
+repo = 'vim-skk/eskk.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/eskk.vim
+'''
+
+[[plugins]]
+repo = 'deton/jasegment.vim'
