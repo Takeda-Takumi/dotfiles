@@ -7,7 +7,7 @@ let g:eskk#directory = '~/.config/eskk'
 let g:eskk#dictionary = { 'path': "~/.config/eskk/my_jisyo", 'sorted': 1, 'encoding': 'utf-8',}
 let g:eskk#large_dictionary = {'path': "~/.config/eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp',}
 
-" let g:eskk#egg_like_newline = 1
+let g:eskk#egg_like_newline = 1
 
 function Eskk_get_mode()
     if (mode() == 'i') && eskk#is_enabled()
@@ -26,3 +26,14 @@ if dein#is_available(['airline'])
   echo eskk.vim
 endif
 
+autocmd User eskk-initialize-pre call s:eskk_initial_pre()
+function! s:eskk_initial_pre()
+  let t = eskk#table#new('rom_to_hira*', 'rom_to_hira')
+  call t.add_map(',', ',')
+  call t.add_map('.', '.')
+  call eskk#register_mode_table('hira', t)
+  let t = eskk#table#new('rom_to_kata*', 'rom_to_kata')
+  call t.add_map(',', ',')
+  call t.add_map('.', '.')
+  call eskk#register_mode_table('kata', t)
+endfunction

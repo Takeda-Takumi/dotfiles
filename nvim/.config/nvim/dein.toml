@@ -292,3 +292,6 @@ source ~/.config/nvim/plugins/eskk.vim
 
 [[plugins]]
 repo = 'deton/jasegment.vim'
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark' 

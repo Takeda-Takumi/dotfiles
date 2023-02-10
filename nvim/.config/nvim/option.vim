@@ -60,4 +60,4 @@ set viminfo= " viminfoファイルに保存しない
 " ######################## その他 ########################
 set encoding=utf-8 " 文字コードをutf-8にする
 syntax enable
-autocmd vimenter * ++nested colorscheme everforest
+autocmd vimenter * ++nested colorscheme codedark
