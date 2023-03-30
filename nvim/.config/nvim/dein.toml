@@ -23,12 +23,6 @@ source ~/.config/nvim/plugins/coc.vim
 # source ~/.config/nvim/plugins/nerdtree.vim
 # '''
 
-# ファイラー
-[[plugins]]
-repo = 'lambdalisue/fern.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/fern.vim
-'''
 # fern plugins >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 [[plugins]]
 repo = 'lambdalisue/fern-bookmark.vim'
@@ -55,6 +49,9 @@ depends = ['fern.vim', 'fzf']
 # [[plugins]]
 # repo = ''
 # depends = ['fern.vim']
+[[plugins]]
+repo = 'lambdalisue/fern-ssh'
+depends = ['fern.vim']
 # fern plugins <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # gruvboxのデザイン
@@ -126,8 +123,8 @@ hook_add = '''
 source ~/.config/nvim/plugins/rainbow.vim
 '''
 # ウィンドウのサイズ変更
-[[plugins]]
-repo = 'simeji/winresizer'
+# [[plugins]]
+# repo = 'simeji/winresizer'
 # hook_add = '''
 # source = ~/.config/nvim/plugins/winresizer.vim
 # '''
@@ -259,6 +256,9 @@ source ~/.config/nvim/plugins/asyncrun.vim
 # color
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
+hook_add = """
+let g:solarized_termcolors=256
+"""
 
 [[plugins]]
 repo = 'vim-test/vim-test'
@@ -295,3 +295,15 @@ repo = 'deton/jasegment.vim'
 
 [[plugins]]
 repo = 'tomasiser/vim-code-dark' 
+
+# ファイラー
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/fern.vim
+'''
+# if = 'v:false'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_post_update = 'TSUpdate'

@@ -29,4 +29,5 @@
   },
   "snippets.ultisnips.pythonPrompt": false,
   // "diagnostic.displayByAle": true
+  "suggest.noselect": true
 }
