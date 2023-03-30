@@ -1,5 +1,5 @@
 if !filereadable(expand('~/.config/eskk/SKK-JISYO.L'))
-  call mkdir('~/.config/eskk', 'p')
+  call mkdir(expand('~/.config/eskk'), 'p')
   call system('cd ~/.config/eskk/ && wget http://openlab.jp/skk/dic/SKK-JISYO.L.gz && gzip -d SKK-JISYO.L.gz')
 endif
 
