@@ -5,6 +5,7 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
 set title " ターミナルのタブ名に現在編集中のファイル名を設定
 set number " 行番号を表示する
 " set relativenumber " 行番号を今いる行から相対的に表示する(13ddとかするときに便利)
@@ -60,4 +61,4 @@ set viminfo= " viminfoファイルに保存しない
 " ######################## その他 ########################
 set encoding=utf-8 " 文字コードをutf-8にする
 syntax enable
-autocmd vimenter * ++nested colorscheme codedark
+autocmd vimenter * ++nested colorscheme solarized8_dark_high
