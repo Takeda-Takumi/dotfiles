@@ -134,6 +134,7 @@ export EDITOR=nvim
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/bin"
 alias color_strip='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
 
 #pyenv
@@ -193,3 +194,6 @@ eval "$(starship completions bash)"
 
 #direnv
 eval "$(direnv hook bash)"
+
+# mame/wsl2-ssh-agent
+eval "$(wsl2-ssh-agent)"
