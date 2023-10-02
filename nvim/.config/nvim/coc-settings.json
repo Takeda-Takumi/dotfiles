@@ -3,7 +3,7 @@
   "clangd.trace.server": "verbose",
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
-    "method":"\uf6a6",
+    "method": "\uf6a6",
     "variable": "\uf71b",
     "constant": "\uf8ff",
     "struct": "\ufb44",
@@ -28,6 +28,14 @@
     "default": "\uf29c"
   },
   "snippets.ultisnips.pythonPrompt": false,
-  // "diagnostic.displayByAle": true
-  "suggest.noselect": true
+  "suggest.noselect": true,
+
+  "coc.preferences.formatOnSave": true,
+
+  "diagnostic-languageserver.filetypes": {
+    "yaml": ["actionlint"]
+  },
+
+  "jest.watch": true,
+  "jest.binCommand": "npm test"
 }

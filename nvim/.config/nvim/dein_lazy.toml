@@ -1,0 +1,30 @@
+[[plugins]]
+repo = 'puremourning/vimspector'
+build = '''
+./install_gadget.py --all
+'''
+hook_post_source = '''
+source ~/.config/nvim/plugins/vimspector.vim
+'''
+on_func = ['vimspector#Launch()', 'vimspector#ToggleBreakpoint', 'vimspector#Continue']
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+hook_post_source = """
+let g:solarized_termcolors=256
+"""
+on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'lervag/vimtex'
+hook_post_source = '''
+source ~/.config/nvim/plugins/vimtex.vim
+'''
+on_ft = 'tex'
+
+[[plugins]]
+repo = 'previm/previm'
+on_ft = ['mermaid']
+hook_post_source = '''
+source ~/.config/nvim/plugins/previm.vim
+'''

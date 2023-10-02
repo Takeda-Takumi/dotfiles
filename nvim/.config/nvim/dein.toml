@@ -10,23 +10,24 @@ source ~/.config/nvim/plugins/auto-pairs.vim
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
+merged = false
 rev = 'release'
-build = 'yarn install --frozen-lockfile'
 hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
 
-# [[plugins]]
-# repo = 'scrooloose/nerdtree'
-# depends = ['ryanoasis/vim-devicons']
-# hook_add = '''
-# source ~/.config/nvim/plugins/nerdtree.vim
-# '''
+# ファイラー
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/fern.vim
+'''
 
 # fern plugins >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 [[plugins]]
 repo = 'lambdalisue/fern-bookmark.vim'
 depends = ['fern.vim']
+on_cmd = ['Fern']
 
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
@@ -34,21 +35,19 @@ depends = ['fern.vim']
 
 [[plugins]]
 repo = 'lambdalisue/nerdfont.vim'
+
 [[plugins]]
 repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 depends = ['fern.vim', 'nerdfont.vim']
 
-[[plugins]]
-repo = 'yuki-yano/fern-preview.vim'
-depends = ['fern.vim']
+# [[plugins]]
+# repo = 'yuki-yano/fern-preview.vim'
+# depends = ['fern.vim']
 
 [[plugins]]
 repo = 'LumaKernel/fern-mapping-fzf.vim'
 depends = ['fern.vim', 'fzf']
 
-# [[plugins]]
-# repo = ''
-# depends = ['fern.vim']
 [[plugins]]
 repo = 'lambdalisue/fern-ssh'
 depends = ['fern.vim']
@@ -96,9 +95,9 @@ repo = 'machakann/vim-sandwich'
 
 # input: i,
 # output: 
-      # ...........
+# ...........
 # a , b , cccccccc , d , e
-      # └─── a, ──┘
+# └─── a, ──┘
 [[plugins]]
 repo = 'wellle/targets.vim'
 
@@ -140,20 +139,13 @@ on_ft = ['markdown', 'pandoc.markdown', 'rmd']
 build = '''
 sh -c "cd app && yarn install"
 '''
-source = '''
+hook_add = '''
 source ~/.config/nvim/plugins/markdown-preview.vim
 '''
 
 # 置換をプレビュー
 [[plugins]]
 repo = 'markonm/traces.vim'
-
-# autocmdのイベントを表示
-# [[plugins]]
-# repo = 'rcarriga/nvim-notify'
-# hook_add = '''
-# source ~/.config/nvim/plugins/nvim-notify.vim
-# '''
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -163,7 +155,7 @@ source ~/.config/nvim/plugins/iceberg.vim
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
-hook_add =  '''
+hook_add = '''
 source ~/.config/nvim/plugins/vim-quickrun.vim
 '''
 
@@ -187,15 +179,6 @@ source ~/.config/nvim/plugins/vim-easy-align.vim
 # [[plugins]]
 # repo = 'christoomey/vim-tmux-navigator'
 
-[[plugins]]
-repo = 'puremourning/vimspector'
-build = '''
-./install_gadget.py --all
-'''
-hook_add = '''
-source ~/.config/nvim/plugins/vimspector.vim
-'''
-
 # pythonのerrorformat設定
 [[plugins]]
 repo = 'aliev/vim-compiler-python'
@@ -206,7 +189,7 @@ repo = 'yssl/QFEnter'
 
 [[plugins]]
 repo = 'haya14busa/vim-asterisk'
-hook_add =  '''
+hook_add = '''
 source ~/.config/nvim/plugins/vim-asterisk.vim
 '''
 
@@ -253,12 +236,6 @@ hook_add = '''
 source ~/.config/nvim/plugins/asyncrun.vim
 '''
 
-# color
-[[plugins]]
-repo = 'altercation/vim-colors-solarized'
-hook_add = """
-let g:solarized_termcolors=256
-"""
 
 [[plugins]]
 repo = 'vim-test/vim-test'
@@ -267,22 +244,10 @@ repo = 'vim-test/vim-test'
 repo = 'tpope/vim-dispatch'
 
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
-
-[[plugins]]
 repo = 'mg979/vim-visual-multi'
 hook_add = '''
 source ~/.config/nvim/plugins/vim-visual-multi.vim
 '''
-
-[[plugins]]
-repo = 'lervag/vimtex'
-hook_add = '''
-source ~/.config/nvim/plugins/vimtex.vim
-'''
-
-# [[plugins]]
-# repo = 'unblevable/quick-scope'
 
 [[plugins]]
 repo = 'vim-skk/eskk.vim'
@@ -294,16 +259,44 @@ source ~/.config/nvim/plugins/eskk.vim
 repo = 'deton/jasegment.vim'
 
 [[plugins]]
-repo = 'tomasiser/vim-code-dark' 
+repo = 'tomasiser/vim-code-dark'
 
-# ファイラー
+
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
+repo = 'dstein64/vim-startuptime'
+
+[[plugins]]
+repo = 'folke/noice.nvim'
+on_event = 'VimEnter'
 hook_add = '''
-source ~/.config/nvim/plugins/fern.vim
+    source ~/.config/nvim/plugins/noice.lua
 '''
-# if = 'v:false'
 
 [[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_post_update = 'TSUpdate'
+repo = 'rcarriga/nvim-notify'
+on_event = 'VimEnter'
+hook_add = '''
+    source ~/.config/nvim/plugins/nvim-notify.lua
+'''
+
+[[plugins]]
+repo = 'MunifTanjim/nui.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'sindrets/diffview.nvim'
+depends = ['plenary.nvim']
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+source ~/.config/nvim/plugins/emmet-vim.vim
+'''
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'

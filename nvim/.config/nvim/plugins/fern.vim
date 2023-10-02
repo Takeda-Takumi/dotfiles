@@ -1,6 +1,5 @@
 function! s:init_fern() abort
-  nnoremap <buffer> <silent> <C-f> <C-^>
-
+  
   " Open bookmark:///
   nnoremap <buffer><silent>
         \ <Plug>(fern-my-enter-bookmark)
@@ -37,12 +36,17 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup END
 
-nnoremap <silent> <C-e> :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
+nnoremap <silent> (normal)e :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
 
 let g:fern#default_hidden = 1
 
 " Add dirs and files inside the brackets that need to remain hidden
-let hide_dirs  = '^\%(' . '\.git' . '\|' . 'node_modules' . '\|' . '__pycache__' . '\|'. '\.DS_Store' . '\)$'  " here you write the dir names 
+let hide_dirs  = '^\%(' 
+" let hide_dirs = hide_dirs . '\.git' . '\|' 
+" let hide_dirs = hide_dirs . 'node_modules' . '\|' 
+let hide_dirs = hide_dirs . '__pycache__' . '\|'
+let hide_dirs = hide_dirs . '\.DS_Store' 
+let hide_dirs = hide_dirs . '\)$'  " here you write the dir names 
 let hide_files = '\%(\.byebug\|\.ruby-\)\+'    " here you write the file names
 
 let g:fern#default_exclude = hide_dirs . '\|' . hide_files  " here you exclude them

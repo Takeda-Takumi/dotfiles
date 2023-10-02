@@ -28,9 +28,6 @@ nnoremap j gj
 nnoremap gj j
 
 " (normal) - 標準コマンドのprefix
-" Ctrl, Shift系
-" 2022/12/05 prefixを[normal]から(normal)に変更
-" [normal]は[nのkeybindに干渉するため
 nnoremap (normal) <nop>
 nmap <Space> (normal)
 nnoremap <silent> (normal)s :<C-u>source $MYVIMRC<CR>
@@ -41,14 +38,4 @@ nnoremap <silent> (normal)h <C-w>h
 nnoremap <silent> (normal)j <C-w>j
 nnoremap <silent> (normal)k <C-w>k
 nnoremap <silent> (normal)l <C-w>l
-nnoremap <silent> (normal)cw <C-w>c
-nnoremap <silent> (normal)= <C-w>=
-nnoremap <silent> (normal)+ <C-w>+
-nnoremap <silent> (normal)- <C-w>-
-nnoremap <silent> (normal)< <C-w><
-nnoremap <silent> (normal)> <C-w>>
-" nnoremap <silent> [normal]cww <C-w>w
-" nnoremap <silent> [normal]cwc <C-w>c
 nnoremap <silent> (normal)bd :<C-u>bp<CR>:<C-u>bd #<CR>
-
-let maplocalleader = ","
