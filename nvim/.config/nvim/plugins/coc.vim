@@ -24,16 +24,35 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Add `:Format` command to format current buffer
+command! -nargs=0 Format :call CocActionAsync('format')
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif CocAction('hasProvider', 'hover')
+    if coc#float#has_float()
+      call coc#float#jump()
+      nnoremap <buffer> q <Cmd>close<CR>
+    else
+      call CocActionAsync('doHover')
+    endif
   else
     call feedkeys('K', 'in')
   endif
 endfunction
+
+
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -61,7 +80,21 @@ let g:coc_global_extensions = [
       \'coc-vimtex',
       \'coc-tsserver',
       \'coc-eslint',
-      \
+      \'coc-vimlsp',
+      \'coc-webview',
+      \'coc-markdown-preview-enhanced',
+      \'coc-java',
+      \'coc-java-debug',
+      \'coc-jest',
+      \'coc-prettier',
+      \'coc-css',
+      \'coc-html',
+      \'coc-sql',
+      \'coc-docker',
+      \'coc-diagnostic',
+      \'coc-yaml',
+      \'coc-fzf-preview',
+      \'coc-lua',
       \]
 
 " Use <C-l> for trigger snippet expand.
@@ -82,6 +115,38 @@ let g:coc_snippet_prev = '<S-Tab>'
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
+" Applying code actions to the selected code block
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
 
 " coc-ltex
 let g:coc_filetype_map = {'tex': 'latex'}
+
+" coc-jest
+" Run jest for current project
+command! -nargs=0 Jest :call  CocAction('runCommand', 'jest.projectTest')
+
+" Run jest for current file
+command! -nargs=0 JestCurrent :call  CocAction('runCommand', 'jest.fileTest', ['%'])
+
+" Run jest for current test
+nnoremap <leader>te :call CocAction('runCommand', 'jest.singleTest')<CR>
+
+" Init jest in current cwd, require global jest command exists
+command! JestInit :call CocAction('runCommand', 'jest.init')
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
+" fzf-preview
+nnoremap (ff) <Nop>
+nmap , (ff)
+nnoremap <silent> (ff)b :<C-u>CocCommand fzf-preview.Buffers<CR>
+nnoremap <silent> (ff)s :<C-u>CocCommand fzf-preview.GitStatus<CR>
+nnoremap <silent> (ff)q :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
+nnoremap <silent> (ff)r :<C-u>CocCommand fzf-preview.CocReferences<CR>
+nnoremap <silent> (ff)d :<C-u>CocCommand fzf-preview.CocDefinition<CR>
+nnoremap <silent> (ff)y :<C-u>CocCommand fzf-preview.CocTypeDefinition<CR>
+

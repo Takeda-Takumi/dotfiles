@@ -155,6 +155,9 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 export GBDKDIR=$HOME/gbdk/
 
+# raspberry pi pico
+export PICO_SDK_PATH=$HOME/pico/pico-sdk
+
 # auto start tmux
 tmux_count=$(ps -ax | grep '[t]mux' | wc -l)
 if test $tmux_count -eq 0; then
@@ -197,3 +200,6 @@ eval "$(direnv hook bash)"
 
 # mame/wsl2-ssh-agent
 eval "$(wsl2-ssh-agent)"
+
+# npm
+eval "`npm completion`"
