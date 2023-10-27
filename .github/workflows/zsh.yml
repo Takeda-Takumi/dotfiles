@@ -1,0 +1,29 @@
+name: zsh
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install zsh
+        run: apt-get update; apt-get -y install zsh
+
+      - name: Install curl
+        run: apt install -y curl
+
+      - name: Install git
+        run: apt install -y git
+
+      - name: Install brew
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
+
+      - name: Run brew bundle
+        run: |
+          brew bundle --file="brew/.Brewfile"
