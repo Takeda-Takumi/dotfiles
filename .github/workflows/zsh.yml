@@ -10,14 +10,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: update apt
+        run: apt update
+
+      - name: Install sudo
+        run: apt install -y sudo
+
       - name: Install zsh
-        run: apt-get update; apt-get -y install zsh
+        run: sudo apt install -y zsh
 
       - name: Install curl
-        run: apt install -y curl
+        run: sudo apt install -y curl
 
       - name: Install git
-        run: apt install -y git
+        run: sudo apt install -y git
 
       - name: Install brew
         run: |
