@@ -2,7 +2,7 @@ name: zsh
 
 on:
   push:
-    branches: [master]
+    branches: ["main"]
 
 jobs:
   ubuntu:
