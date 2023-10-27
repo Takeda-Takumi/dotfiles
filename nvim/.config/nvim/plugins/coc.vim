@@ -95,6 +95,7 @@ let g:coc_global_extensions = [
       \'coc-yaml',
       \'coc-fzf-preview',
       \'coc-lua',
+      \'coc-cmake',
       \]
 
 " Use <C-l> for trigger snippet expand.
@@ -137,16 +138,17 @@ nnoremap <leader>te :call CocAction('runCommand', 'jest.singleTest')<CR>
 " Init jest in current cwd, require global jest command exists
 command! JestInit :call CocAction('runCommand', 'jest.init')
 
+nnoremap <silent> (plugin)jt :<C-u>call CocAction('runCommand', 'jest.projectTest')<CR>
+nnoremap <silent> (plugin)jc :<C-u>call CocAction('runCommand', 'jest.fileTest', ['%'])<CR>
+
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " fzf-preview
-nnoremap (ff) <Nop>
-nmap , (ff)
-nnoremap <silent> (ff)b :<C-u>CocCommand fzf-preview.Buffers<CR>
-nnoremap <silent> (ff)s :<C-u>CocCommand fzf-preview.GitStatus<CR>
-nnoremap <silent> (ff)q :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
-nnoremap <silent> (ff)r :<C-u>CocCommand fzf-preview.CocReferences<CR>
-nnoremap <silent> (ff)d :<C-u>CocCommand fzf-preview.CocDefinition<CR>
-nnoremap <silent> (ff)y :<C-u>CocCommand fzf-preview.CocTypeDefinition<CR>
+nnoremap <silent> (plugin)fb :<C-u>CocCommand fzf-preview.Buffers<CR>
+nnoremap <silent> (plugin)fs :<C-u>CocCommand fzf-preview.GitStatus<CR>
+nnoremap <silent> (plugin)fq :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
+nnoremap <silent> (plugin)fr :<C-u>CocCommand fzf-preview.CocReferences<CR>
+nnoremap <silent> (plugin)fd :<C-u>CocCommand fzf-preview.CocDefinition<CR>
+nnoremap <silent> (plugin)fy :<C-u>CocCommand fzf-preview.CocTypeDefinition<CR>
 

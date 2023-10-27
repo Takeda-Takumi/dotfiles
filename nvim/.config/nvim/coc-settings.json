@@ -1,6 +1,7 @@
 {
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
-  "clangd.trace.server": "verbose",
+  // "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
+  // "clangd.trace.server": "verbose",
+  "clangd.compilationDatabaseCandidates": ["${workspaceFolder}",],
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",
@@ -28,7 +29,6 @@
     "default": "\uf29c"
   },
   "snippets.ultisnips.pythonPrompt": false,
-  "suggest.noselect": true,
 
   "coc.preferences.formatOnSave": true,
 
@@ -36,6 +36,6 @@
     "yaml": ["actionlint"]
   },
 
-  "jest.watch": true,
-  "jest.binCommand": "npm test"
+  "jest.binCommand": "npm test",
+  "suggest.noselect": true
 }
