@@ -15,5 +15,4 @@ fi
 
 
 brew install stow
-
-stow -v nvim
+stow -v stow

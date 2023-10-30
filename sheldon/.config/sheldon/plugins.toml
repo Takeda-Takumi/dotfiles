@@ -24,7 +24,6 @@ fpath_src = 'fpath=( "{{ dir }}/src" $fpath )'
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-
 [plugins.fzf]
 github = "junegunn/fzf"
 apply = ['fzf-install']
@@ -41,3 +40,6 @@ apply = ["fpath"]
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 apply = ["fpath_src"]
+
+[plugins.compinit]
+inline = 'autoload -Uz compint && zsh-defer compinit'
