@@ -96,6 +96,7 @@ let g:coc_global_extensions = [
       \'coc-fzf-preview',
       \'coc-lua',
       \'coc-cmake',
+      \'coc-sh',
       \]
 
 " Use <C-l> for trigger snippet expand.

@@ -30,4 +30,4 @@ jobs:
 
       - name: Run brew bundle
         run: |
-          brew bundle --file="brew/.Brewfile"
+          brew bundle --file="homebrew/.Brewfile"

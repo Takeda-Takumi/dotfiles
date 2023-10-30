@@ -17,3 +17,15 @@ jobs:
         run: sudo apt install -y git
 
       - run: ${GITHUB_WORKSPACE}/install.sh
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: update apt
+        run: sudo apt update
+
+      - name: Install git
+        run: sudo apt install -y git
+
+      - run: ${GITHUB_WORKSPACE}/install.sh

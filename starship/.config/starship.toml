@@ -1,4 +1,7 @@
+[status]
+disabled = false
+
 [custom.gitmail]
 command = "git config user.email"
-when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
-format = 'by [($output)](fg:blue) '
+when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1 && test $(git config user.email) != '' "
+format = ' by [($output)](fg:blue) '
