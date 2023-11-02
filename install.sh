@@ -15,4 +15,3 @@ fi
 
 
 brew install stow
-stow -v stow
