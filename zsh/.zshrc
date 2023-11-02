@@ -29,7 +29,6 @@ eval "$(rbenv init - zsh)"
 eval "$(starship init zsh)"
 
 #sheldon
-eval "$(sheldon completions --shell zsh)"
 eval "$(sheldon source)"
 
 # mame/wsl2-ssh-agent
@@ -40,6 +39,3 @@ eval $(npm completion)
 
 # zsh-autosuggestions
 bindkey '^[[Z' autosuggest-accept
-
-autoload -Uz compinit
-compinit
