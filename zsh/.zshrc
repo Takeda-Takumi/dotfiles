@@ -10,6 +10,16 @@ export PATH="$PATH:$GOBIN"
 
 export EDITOR="nvim"
 
+# brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # nvim
 export NVIM_COC_LOG_FILE="/tmp/coc.log"
 
@@ -34,12 +44,3 @@ eval $(npm completion)
 # zsh-autosuggestions
 bindkey '^[[Z' autosuggest-accept
 
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
