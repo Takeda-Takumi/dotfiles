@@ -15,9 +15,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
 fi
 
 # nvim
@@ -44,3 +41,5 @@ eval $(npm completion)
 # zsh-autosuggestions
 bindkey '^[[Z' autosuggest-accept
 
+autoload -Uz compinit
+compinit
