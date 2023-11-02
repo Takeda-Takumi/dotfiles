@@ -8,20 +8,15 @@ endif
 
 set title " ターミナルのタブ名に現在編集中のファイル名を設定
 set number " 行番号を表示する
-" set relativenumber " 行番号を今いる行から相対的に表示する(13ddとかするときに便利)
 " set wrap " 右端まで表示される行を折り返して表示する
 set nowrap " 右端まで表示される行を折り返して表示しない
 set showmatch " 括弧入力時の対応する括弧を表示
 set list "不可視文字(改行記号など)の可視化
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲ " デフォルト不可視文字は美しくないのでUnicodeできれいに
 set matchtime=3 " 対応括弧のハイライト表示を3sにする
+set foldmethod=marker
+set foldlevel=100
 
-" highlight Cursor guifg=white guibg=black
-" highlight iCursor guifg=white guibg=steelblue
-" set guicursor=n-v-c:block-Cursor
-" set guicursor+=i:ver100-iCursor
-" set guicursor+=n-v-c:blinkon0
-" set guicursor+=i:blinkwait10
 
 " ######################## 検索・置換 ########################
 
@@ -45,8 +40,6 @@ set infercase " 補完時に大文字小文字を区別しない
 set wildmenu "コマンドの補完を有効に
 
 " ######################## 操作 ########################
-" set clipboard+=unnamedplus " クリップボードにコピーできるようにする
-" set backspace=indent,eol,start " backspaceで様々な文字を消せるようにする(デフォルトだと改行文字などはbackspaceで削除できない)
 set hidden " タブを切り替えるときに保存していなくてもOKにする
 set textwidth=0 "自動改行する文字数
 

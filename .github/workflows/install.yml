@@ -24,6 +24,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install git
-        run: brew install git
+        run: brew install -y git
 
       - run: ${GITHUB_WORKSPACE}/install.sh

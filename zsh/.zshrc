@@ -1,3 +1,5 @@
+typeset -U PATH fpath
+
 export PATH="$PATH:$HOME/.local/bin"
 
 # go
