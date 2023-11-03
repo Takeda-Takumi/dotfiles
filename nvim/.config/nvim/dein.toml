@@ -23,7 +23,7 @@ hook_add = '''
 source ~/.config/nvim/plugins/fern.vim
 '''
 
-# fern plugins >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#{{{fern plugins
 [[plugins]]
 repo = 'lambdalisue/fern-bookmark.vim'
 depends = ['fern.vim']
@@ -47,7 +47,7 @@ depends = ['fern.vim', 'fzf']
 [[plugins]]
 repo = 'lambdalisue/fern-ssh'
 depends = ['fern.vim']
-# fern plugins <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#}}}
 
 # gruvboxのデザイン
 [[plugins]]
