@@ -163,40 +163,6 @@ repo = 'kevinhwang91/nvim-bqf'
 [[plugins]]
 repo = 'honza/vim-snippets'
 
-#{{{colorschemes
-# color
-[[plugins]]
-repo = 'flazz/vim-colorschemes'
-
-# color
-[[plugins]]
-repo = 'sainnhe/everforest'
-hook_add = '''
-source ~/.config/nvim/plugins/everforest.vim
-'''
-# color
-[[plugins]]
-repo = 'ayu-theme/ayu-vim'
-hook_add = '''
-source ~/.config/nvim/plugins/ayu-vim.vim
-'''
-
-[[plugins]]
-repo = 'morhetz/gruvbox'
-hook_add = '''
-source ~/.config/nvim/plugins/gruvbox.vim
-'''
-
-[[plugins]]
-repo = 'tomasiser/vim-code-dark'
-
-[[plugins]]
-repo = 'cocopon/iceberg.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/iceberg.vim
-'''
-#}}}
-
 [[plugins]]
 repo = 'skywind3000/asynctasks.vim'
 hook_add = '''
