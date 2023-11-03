@@ -168,6 +168,9 @@ source ~/.config/nvim/plugins/asyncrun.vim
 [[plugins]]
 repo = 'vim-test/vim-test'
 depends = ['vim-dispatch']
+hook_add = '''
+let g:test#strategy = 'dispatch'
+'''
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
