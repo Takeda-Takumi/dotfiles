@@ -40,10 +40,6 @@ repo = 'lambdalisue/nerdfont.vim'
 repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 depends = ['fern.vim', 'nerdfont.vim']
 
-# [[plugins]]
-# repo = 'yuki-yano/fern-preview.vim'
-# depends = ['fern.vim']
-
 [[plugins]]
 repo = 'LumaKernel/fern-mapping-fzf.vim'
 depends = ['fern.vim', 'fzf']
@@ -89,18 +85,11 @@ repo = 'vim-airline/vim-airline-themes.git'
 [[plugins]]
 repo = 'tpope/vim-commentary'
 
-# saiw) => (test)
 [[plugins]]
 repo = 'machakann/vim-sandwich'
 
-# input: i,
-# output: 
-# ...........
-# a , b , cccccccc , d , e
-# └─── a, ──┘
 [[plugins]]
 repo = 'wellle/targets.vim'
-
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -121,16 +110,6 @@ repo = 'luochen1990/rainbow'
 hook_add = '''
 source ~/.config/nvim/plugins/rainbow.vim
 '''
-# ウィンドウのサイズ変更
-# [[plugins]]
-# repo = 'simeji/winresizer'
-# hook_add = '''
-# source = ~/.config/nvim/plugins/winresizer.vim
-# '''
-
-# nerdtreeにgitのステータスを表示
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
 
 # markdown preview
 [[plugins]]
@@ -165,19 +144,11 @@ repo = 'preservim/vimux'
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 
-# [[plugins]]
-# repo = 'nathanaelkane/vim-indent-guides'
-# hook_add = '''
-# source ~/.config/nvim/plugins/vim-indent-guides.vim
-# '''
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
 hook_add = '''
 source ~/.config/nvim/plugins/vim-easy-align.vim
 '''
-
-# [[plugins]]
-# repo = 'christoomey/vim-tmux-navigator'
 
 # pythonのerrorformat設定
 [[plugins]]
@@ -203,15 +174,10 @@ repo = 'kevinhwang91/nvim-bqf'
 [[plugins]]
 repo = 'honza/vim-snippets'
 
-# [[plugins]]
-# repo = 'dense-analysis/ale'
-# hook_source = '''
-# let g:ale_disable_lsp = 1
-# '''
-
 # color
 [[plugins]]
 repo = 'flazz/vim-colorschemes'
+
 # color
 [[plugins]]
 repo = 'sainnhe/everforest'
@@ -235,7 +201,6 @@ repo = 'skywind3000/asyncrun.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/asyncrun.vim
 '''
-
 
 [[plugins]]
 repo = 'vim-test/vim-test'
