@@ -56,6 +56,10 @@ hook_post_source = """
 let g:solarized_termcolors=256
 """
 on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'shaunsingh/nord.nvim'
+
 #}}}
 #{{{filetype
 [[plugins]]
