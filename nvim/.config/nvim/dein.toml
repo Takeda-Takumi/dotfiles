@@ -1,13 +1,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# 閉じ括弧
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-hook_add = '''
-source ~/.config/nvim/plugins/auto-pairs.vim
-'''
-
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = false
@@ -16,212 +9,22 @@ hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
 
-# ファイラー
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/fern.vim
+repo = 'junegunn/fzf'
+build = '''
+./install --all
 '''
 
-#{{{fern plugins
 [[plugins]]
-repo = 'lambdalisue/fern-bookmark.vim'
-depends = ['fern.vim']
-on_cmd = ['Fern']
-
-[[plugins]]
-repo = 'lambdalisue/fern-git-status.vim'
-depends = ['fern.vim']
-
-[[plugins]]
-repo = 'lambdalisue/nerdfont.vim'
-
-[[plugins]]
-repo = 'lambdalisue/fern-renderer-nerdfont.vim'
-depends = ['fern.vim', 'nerdfont.vim']
-
-[[plugins]]
-repo = 'LumaKernel/fern-mapping-fzf.vim'
-depends = ['fern.vim', 'fzf']
-
-[[plugins]]
-repo = 'lambdalisue/fern-ssh'
-depends = ['fern.vim']
-#}}}
-
-# yankをハイライトする
-[[plugins]]
-repo = 'machakann/vim-highlightedyank'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-highlightedyank.vim
-'''
-
-# git
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/lightline.vim
 '''
-depends = ['lightline-bufferline']
 
 [[plugins]]
 repo = 'mengelbrecht/lightline-bufferline'
-
-# gcでコメントアウト
-[[plugins]]
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
-repo = 'machakann/vim-sandwich'
-
-[[plugins]]
-repo = 'wellle/targets.vim'
-
-[[plugins]]
-repo = 'junegunn/fzf'
-build = '''
-./install --all
-'''
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
-
-# 日本語help
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-
-# 色付き括弧
-[[plugins]]
-repo = 'luochen1990/rainbow'
-hook_add = '''
-source ~/.config/nvim/plugins/rainbow.vim
-'''
-
-# 置換をプレビュー
-[[plugins]]
-repo = 'markonm/traces.vim'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-quickrun.vim
-'''
-
-[[plugins]]
-repo = 'preservim/vimux'
-
-[[plugins]]
-repo = 'sheerun/vim-polyglot'
-
-[[plugins]]
-repo = 'junegunn/vim-easy-align'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-easy-align.vim
-'''
-
-# pythonのerrorformat設定
-[[plugins]]
-repo = 'aliev/vim-compiler-python'
-
-#quickfix
-[[plugins]]
-repo = 'yssl/QFEnter'
-
-[[plugins]]
-repo = 'haya14busa/vim-asterisk'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-asterisk.vim
-'''
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
-repo = 'kevinhwang91/nvim-bqf'
-
-[[plugins]]
-repo = 'honza/vim-snippets'
-
-[[plugins]]
-repo = 'skywind3000/asynctasks.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/asynctasks.vim
-'''
-depends = ['asyncrun.vim']
-
-[[plugins]]
-repo = 'skywind3000/asyncrun.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/asyncrun.vim
-'''
-
-[[plugins]]
-repo = 'vim-test/vim-test'
-depends = ['vim-dispatch']
-hook_add = '''
-let g:test#strategy = 'dispatch'
-'''
-
-[[plugins]]
-repo = 'tpope/vim-dispatch'
-
-[[plugins]]
-repo = 'mg979/vim-visual-multi'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-visual-multi.vim
-'''
-
-[[plugins]]
-repo = 'vim-skk/eskk.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/eskk.vim
-'''
-
-[[plugins]]
-repo = 'deton/jasegment.vim'
-
-[[plugins]]
-repo = 'dstein64/vim-startuptime'
-
-[[plugins]]
-repo = 'folke/noice.nvim'
-on_event = 'VimEnter'
-hook_add = '''
-    source ~/.config/nvim/lua/plugins/noice.lua
-'''
-depends = ['nui.nvim', 'nvim-notify']
-
-[[plugins]]
-repo = 'rcarriga/nvim-notify'
-on_event = 'VimEnter'
-hook_add = '''
-    source ~/.config/nvim/lua/plugins/nvim-notify.lua
-'''
-
-[[plugins]]
-repo = 'MunifTanjim/nui.nvim'
-
-[[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-
-[[plugins]]
-repo = 'sindrets/diffview.nvim'
-depends = ['plenary.nvim']
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
-hook_add = '''
-source ~/.config/nvim/plugins/emmet-vim.vim
-'''
-
-[[plugins]]
-repo = 'wsdjeg/dein-ui.vim'
+on_source = 'lightline.vim'
