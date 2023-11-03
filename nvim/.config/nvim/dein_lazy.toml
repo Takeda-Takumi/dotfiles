@@ -6,7 +6,49 @@ build = '''
 hook_post_source = '''
 source ~/.config/nvim/plugins/vimspector.vim
 '''
-on_func = ['vimspector#Launch()', 'vimspector#ToggleBreakpoint', 'vimspector#Continue']
+on_func = [
+  'vimspector#Launch()',
+  'vimspector#ToggleBreakpoint',
+  'vimspector#Continue',
+]
+
+#{{{colorschemes
+[[plugins]]
+repo = 'flazz/vim-colorschemes'
+on_event = ['ColorSchemePre']
+
+# color
+[[plugins]]
+repo = 'sainnhe/everforest'
+hook_post_source = '''
+source ~/.config/nvim/plugins/everforest.vim
+'''
+on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+hook_post_source = '''
+source ~/.config/nvim/plugins/ayu-vim.vim
+'''
+on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'morhetz/gruvbox'
+hook_post_source = '''
+source ~/.config/nvim/plugins/gruvbox.vim
+'''
+on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+on_event = ['ColorSchemePre']
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_post_source = '''
+source ~/.config/nvim/plugins/iceberg.vim
+'''
+on_event = ['ColorSchemePre']
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
@@ -14,6 +56,7 @@ hook_post_source = """
 let g:solarized_termcolors=256
 """
 on_event = ['ColorSchemePre']
+#}}}
 
 [[plugins]]
 repo = 'lervag/vimtex'
