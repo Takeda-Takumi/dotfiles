@@ -70,6 +70,10 @@ repo = 'itchyny/lightline.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/lightline.vim
 '''
+depends = ['lightline-bufferline']
+
+[[plugins]]
+repo = 'mengelbrecht/lightline-bufferline'
 
 # gcでコメントアウト
 [[plugins]]
