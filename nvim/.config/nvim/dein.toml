@@ -49,12 +49,6 @@ repo = 'lambdalisue/fern-ssh'
 depends = ['fern.vim']
 #}}}
 
-# gruvboxのデザイン
-[[plugins]]
-repo = 'morhetz/gruvbox'
-hook_add = '''
-source ~/.config/nvim/plugins/gruvbox.vim
-'''
 
 # yankをハイライトする
 [[plugins]]
@@ -99,7 +93,6 @@ build = '''
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 
-
 # 日本語help
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
@@ -125,12 +118,6 @@ source ~/.config/nvim/plugins/markdown-preview.vim
 # 置換をプレビュー
 [[plugins]]
 repo = 'markonm/traces.vim'
-
-[[plugins]]
-repo = 'cocopon/iceberg.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/iceberg.vim
-'''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
@@ -174,6 +161,7 @@ repo = 'kevinhwang91/nvim-bqf'
 [[plugins]]
 repo = 'honza/vim-snippets'
 
+#{{{colorschemes
 # color
 [[plugins]]
 repo = 'flazz/vim-colorschemes'
@@ -190,6 +178,22 @@ repo = 'ayu-theme/ayu-vim'
 hook_add = '''
 source ~/.config/nvim/plugins/ayu-vim.vim
 '''
+
+[[plugins]]
+repo = 'morhetz/gruvbox'
+hook_add = '''
+source ~/.config/nvim/plugins/gruvbox.vim
+'''
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/iceberg.vim
+'''
+#}}}
 
 [[plugins]]
 repo = 'skywind3000/asynctasks.vim'
@@ -222,10 +226,6 @@ source ~/.config/nvim/plugins/eskk.vim
 
 [[plugins]]
 repo = 'deton/jasegment.vim'
-
-[[plugins]]
-repo = 'tomasiser/vim-code-dark'
-
 
 [[plugins]]
 repo = 'dstein64/vim-startuptime'
