@@ -3,6 +3,8 @@ typeset -U PATH fpath
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="nvim"
 
+bindkey -e
+
 # go
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/go"
