@@ -1,14 +1,13 @@
 typeset -U PATH fpath
 
 export PATH="$PATH:$HOME/.local/bin"
+export EDITOR="nvim"
 
 # go
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOBIN"
-
-export EDITOR="nvim"
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
