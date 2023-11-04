@@ -2,11 +2,17 @@ let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'showcmd', 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'tabline': {
       \   'left': [ ['buffers'] ],
       \   'right': [ ['close'] ]
+      \ },
+      \ 'component': {
+      \   'showcmd': '%S'
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
