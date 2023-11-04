@@ -16,6 +16,8 @@ set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲ " デフォ�
 set matchtime=3 " 対応括弧のハイライト表示を3sにする
 set foldmethod=marker
 set showtabline=2
+set showcmd
+set showcmdloc=statusline
 
 
 " ######################## 検索・置換 ########################
