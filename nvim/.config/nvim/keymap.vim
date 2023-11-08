@@ -27,19 +27,19 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" (normal) - 標準コマンドのprefix
-nnoremap (normal) <nop>
-nmap <Space> (normal)
-nnoremap <silent> (normal)s :<C-u>source $MYVIMRC<CR>
-nnoremap <silent> (normal)w :<C-u>write<CR>
-nnoremap <silent> (normal)q :<C-u>quit<CR>
-nnoremap <silent> (normal)Q :<C-u>quit!<CR>
-nnoremap <silent> (normal)h <C-w>h
-nnoremap <silent> (normal)j <C-w>j
-nnoremap <silent> (normal)k <C-w>k
-nnoremap <silent> (normal)l <C-w>l
-nnoremap <silent> (normal)bd :<C-u>bp<CR>:<C-u>bd #<CR>
-noremap <silent> (normal)n :<C-u>nohls<CR>
+" \<normal> - 標準コマンドのprefix
+nnoremap \<normal> <nop>
+nmap <Space> \<normal>
+nnoremap <silent> \<normal>s :<C-u>source $MYVIMRC<CR>
+nnoremap <silent> \<normal>w :<C-u>write<CR>
+nnoremap <silent> \<normal>q :<C-u>quit<CR>
+nnoremap <silent> \<normal>Q :<C-u>quit!<CR>
+nnoremap <silent> \<normal>h <C-w>h
+nnoremap <silent> \<normal>j <C-w>j
+nnoremap <silent> \<normal>k <C-w>k
+nnoremap <silent> \<normal>l <C-w>l
+nnoremap <silent> \<normal>bd :<C-u>bp<CR>:<C-u>bd #<CR>
+noremap <silent> \<normal>n :<C-u>nohls<CR>
 
-nnoremap (plugin) <Nop>
-nmap , (plugin)
+nnoremap \<plugin> <Nop>
+nmap , \<plugin>

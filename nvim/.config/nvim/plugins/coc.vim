@@ -138,8 +138,8 @@ nnoremap <leader>te :call CocAction('runCommand', 'jest.singleTest')<CR>
 " Init jest in current cwd, require global jest command exists
 command! JestInit :call CocAction('runCommand', 'jest.init')
 
-nnoremap <silent> (plugin)jt :<C-u>call CocAction('runCommand', 'jest.projectTest')<CR>
-nnoremap <silent> (plugin)jc :<C-u>call CocAction('runCommand', 'jest.fileTest', ['%'])<CR>
+nnoremap <silent> \<plugin>jt :<C-u>call CocAction('runCommand', 'jest.projectTest')<CR>
+nnoremap <silent> \<plugin>jc :<C-u>call CocAction('runCommand', 'jest.fileTest', ['%'])<CR>
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

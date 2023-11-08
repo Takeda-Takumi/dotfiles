@@ -36,7 +36,7 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup END
 
-nnoremap <silent> (plugin)e :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
+nnoremap <silent> \<plugin>e :<C-u>Fern <C-r>=<SID>smart_path()<CR><CR>
 
 let g:fern#default_hidden = 1
 
