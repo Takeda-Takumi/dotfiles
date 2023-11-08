@@ -269,13 +269,6 @@ source ~/.config/nvim/plugins/eskk.vim
 on_event = 'InsertEnter'
 
 [[plugins]]
-repo = 'jiangmiao/auto-pairs'
-hook_post_source = '''
-source ~/.config/nvim/plugins/auto-pairs.vim
-'''
-on_event = 'InsertEnter'
-
-[[plugins]]
 repo = 'honza/vim-snippets'
 on_event = 'InsertEnter'
 
@@ -283,6 +276,13 @@ on_event = 'InsertEnter'
 repo = 'mattn/emmet-vim'
 hook_post_source = '''
 source ~/.config/nvim/plugins/emmet-vim.vim
+'''
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+lua_add = '''
+require("nvim-autopairs").setup {}
 '''
 on_event = 'InsertEnter'
 
