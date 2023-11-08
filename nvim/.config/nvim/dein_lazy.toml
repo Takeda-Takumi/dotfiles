@@ -55,12 +55,15 @@ repo = 'nvim-telescope/telescope.nvim'
 depends = ['plenary.nvim']
 on_cmd = ['Telescope']
 lua_source = '''
-require('telescope').load_extension "frecency"
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '(plugin)ff', builtin.find_files, {})
 vim.keymap.set('n', '(plugin)fg', builtin.live_grep, {})
 vim.keymap.set('n', '(plugin)fb', builtin.buffers, {})
 vim.keymap.set('n', '(plugin)fh', builtin.help_tags, {})
+
+local telescope = require('telescope')
+telescope.load_extension "frecency"
+telescope.load_extension "fzf"
 '''
 
 # {{{ plugins
@@ -69,6 +72,11 @@ vim.keymap.set('n', '(plugin)fh', builtin.help_tags, {})
 repo = 'nvim-telescope/telescope-frecency.nvim'
 on_source = 'telescope.nvim'
 depends = ['nvim-web-devicons']
+
+[[plugins]]
+repo = 'nvim-telescope/telescope-fzf-native.nvim'
+on_source = 'telescope.nvim'
+build = 'make'
 
 # }}}
 
