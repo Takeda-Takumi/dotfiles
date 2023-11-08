@@ -10,16 +10,6 @@ source ~/.config/nvim/plugins/coc.vim
 '''
 
 [[plugins]]
-repo = 'junegunn/fzf'
-build = '''
-./install --all
-'''
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/lightline.vim

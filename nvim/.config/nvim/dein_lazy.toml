@@ -38,11 +38,6 @@ repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 on_source = ['fern.vim', 'nerdfont.vim']
 
 [[plugins]]
-repo = 'LumaKernel/fern-mapping-fzf.vim'
-on_source = 'fern.vim'
-depends = 'fzf'
-
-[[plugins]]
 repo = 'lambdalisue/fern-ssh'
 on_source = 'fern.vim'
 #}}}
