@@ -93,7 +93,6 @@ let g:coc_global_extensions = [
       \'coc-docker',
       \'coc-diagnostic',
       \'coc-yaml',
-      \'coc-fzf-preview',
       \'coc-lua',
       \'coc-cmake',
       \'coc-sh',
@@ -144,12 +143,3 @@ nnoremap <silent> (plugin)jc :<C-u>call CocAction('runCommand', 'jest.fileTest',
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
-" fzf-preview
-nnoremap <silent> (plugin)fb :<C-u>CocCommand fzf-preview.Buffers<CR>
-nnoremap <silent> (plugin)fs :<C-u>CocCommand fzf-preview.GitStatus<CR>
-nnoremap <silent> (plugin)fq :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
-nnoremap <silent> (plugin)fr :<C-u>CocCommand fzf-preview.CocReferences<CR>
-nnoremap <silent> (plugin)fd :<C-u>CocCommand fzf-preview.CocDefinition<CR>
-nnoremap <silent> (plugin)fy :<C-u>CocCommand fzf-preview.CocTypeDefinition<CR>
-
