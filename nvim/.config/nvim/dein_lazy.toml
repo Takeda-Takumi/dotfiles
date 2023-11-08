@@ -295,6 +295,13 @@ on_event = 'BufReadPost'
 repo = 'airblade/vim-gitgutter'
 on_event = 'BufReadPost'
 
+[[plugins]]
+repo = 'mhinz/vim-sayonara'
+on_event = 'BufReadPost'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-sayonara.vim
+'''
+
 # }}}
 
 #{{{ InsertEnter
