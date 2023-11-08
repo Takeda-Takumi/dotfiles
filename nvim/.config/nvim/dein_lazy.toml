@@ -13,13 +13,12 @@ on_func = [
 ]
 
 #{{{ fern
-# ファイラー
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/fern.vim
 '''
-on_cmd = 'Fern'
+on_event = 'VimEnter'
 
 #{{{fern plugins
 [[plugins]]
@@ -40,7 +39,8 @@ on_source = ['fern.vim', 'nerdfont.vim']
 
 [[plugins]]
 repo = 'LumaKernel/fern-mapping-fzf.vim'
-on_source = ['fern.vim', 'fzf']
+on_source = 'fern.vim'
+depends = 'fzf'
 
 [[plugins]]
 repo = 'lambdalisue/fern-ssh'
@@ -281,7 +281,7 @@ on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
-lua_add = '''
+lua_post_source = '''
 require("nvim-autopairs").setup {}
 '''
 on_event = 'InsertEnter'
