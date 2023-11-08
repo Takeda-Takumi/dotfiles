@@ -190,7 +190,7 @@ on_cmd = ['Vimux']
 
 [[plugins]]
 repo = 'sindrets/diffview.nvim'
-depends = ['plenary.nvim']
+depends = ['plenary.nvim', 'nvim-web-devicons']
 on_cmd = ['DiffviewOpen']
 
 [[plugins]]
