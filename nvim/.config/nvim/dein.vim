@@ -15,10 +15,10 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " Set Dein base path (required)
-let s:dein_base = '/home/takeda/.cache/dein'
+let s:dein_base = $HOME .. '/.cache/dein'
 
 " Set Dein source path (required)
-let s:dein_src = '/home/takeda/.cache/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_src = s:dein_base .. '/repos/github.com/Shougo/dein.vim'
 
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src
