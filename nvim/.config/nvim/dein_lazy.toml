@@ -1,17 +1,3 @@
-[[plugins]]
-repo = 'puremourning/vimspector'
-build = '''
-./install_gadget.py --all
-'''
-hook_post_source = '''
-source ~/.config/nvim/plugins/vimspector.vim
-'''
-on_func = [
-  'vimspector#Launch()',
-  'vimspector#ToggleBreakpoint',
-  'vimspector#Continue',
-]
-
 #{{{ fern
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
@@ -212,6 +198,24 @@ on_cmd = ['Git']
 [[plugins]]
 repo = 'dstein64/vim-startuptime'
 on_cmd = 'StartupTime'
+
+#}}}
+
+# {{{ on_func
+
+[[plugins]]
+repo = 'puremourning/vimspector'
+build = '''
+./install_gadget.py --all
+'''
+hook_post_source = '''
+source ~/.config/nvim/plugins/vimspector.vim
+'''
+on_func = [
+  'vimspector#Launch()',
+  'vimspector#ToggleBreakpoint',
+  'vimspector#Continue',
+]
 
 #}}}
 
