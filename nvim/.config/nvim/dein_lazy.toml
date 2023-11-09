@@ -327,6 +327,14 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-sayonara.vim
 '''
 
+[[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+on_event = 'BufReadPost'
+lua_post_source = '''
+require('ibl').setup()
+'''
+
+
 # }}}
 
 #{{{ InsertEnter
