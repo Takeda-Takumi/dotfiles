@@ -38,8 +38,11 @@ eval "$(sheldon source)"
 # mame/wsl2-ssh-agent
 eval "$(wsl2-ssh-agent)"
 
-# npm
-eval $(npm completion)
-
 # zsh-autosuggestions
 bindkey '^[[Z' autosuggest-accept
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# npm
+eval $(npm completion)
