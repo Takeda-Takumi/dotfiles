@@ -51,6 +51,11 @@ repo = 'nvim-telescope/telescope-fzf-native.nvim'
 on_source = 'telescope.nvim'
 build = 'make'
 
+[[plugins]]
+repo = 'nvim-telescope/telescope-file-browser.nvim'
+on_source = 'telescope.nvim'
+depends = 'plenary.nvim'
+
 # }}}
 
 # }}}
