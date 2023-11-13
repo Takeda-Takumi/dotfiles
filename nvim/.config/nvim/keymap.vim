@@ -1,20 +1,17 @@
-" set pastetoggle=<F3> "F3でpaste切り替え"
-
-" 挿入モードからjjで抜ける
-" inoremap <silent> jj <ESC>
-
 " バッファの移動
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
-" cmdline上で移動
+" cmdline
 cnoremap <C-A> <Home>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
+cnoremap <C-J> <C-N>
+cnoremap <C-K> <C-P>
 
 nnoremap H ^
 nnoremap L $
