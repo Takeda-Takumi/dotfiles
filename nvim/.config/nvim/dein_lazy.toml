@@ -332,6 +332,12 @@ lua_post_source = '''
 require('ibl').setup()
 '''
 
+[[plugins]]
+repo = 'karb94/neoscroll.nvim'
+on_event = 'BufReadPost'
+lua_source = '''
+require('neoscroll').setup()
+'''
 
 # }}}
 
