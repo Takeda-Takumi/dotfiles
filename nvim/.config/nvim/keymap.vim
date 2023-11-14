@@ -35,7 +35,6 @@ nnoremap <silent> \<normal>h <C-w>h
 nnoremap <silent> \<normal>j <C-w>j
 nnoremap <silent> \<normal>k <C-w>k
 nnoremap <silent> \<normal>l <C-w>l
-nnoremap <silent> \<normal>bd :<C-u>bp<CR>:<C-u>bd #<CR>
 noremap <silent> \<normal>n :<C-u>nohls<CR>
 
 nnoremap \<plugin> <Nop>
