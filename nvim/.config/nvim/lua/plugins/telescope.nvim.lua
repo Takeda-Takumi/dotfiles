@@ -27,6 +27,7 @@ telescope.setup {
 telescope.load_extension "frecency"
 telescope.load_extension "fzf"
 telescope.load_extension 'file_browser'
+telescope.load_extension 'project'
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '\\<plugin>ff', builtin.find_files, {})
@@ -37,3 +38,5 @@ vim.keymap.set('n', '\\<plugin>fr', "<Cmd>Telescope frecency<CR>")
 
 vim.keymap.set('n', '\\<plugin>e',
     "<cmd>lua require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' })<CR>", {})
+vim.keymap.set('n', '\\<plugin>fd', ":lua require'telescope'.extensions.project.project{}<CR>",
+    { noremap = true, silent = true })
