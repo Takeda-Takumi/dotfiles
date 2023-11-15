@@ -11,6 +11,7 @@ vim.opt.wrapscan = true
 
 -- completion
 vim.opt.completeopt = { 'menu' }
+vim.opt.wildmode = { 'longest:full' }
 vim.opt.infercase = true
 vim.opt.wildmenu = true
 
