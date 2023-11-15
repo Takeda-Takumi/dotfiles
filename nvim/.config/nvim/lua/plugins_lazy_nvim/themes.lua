@@ -1,4 +1,6 @@
 return {
-  'shaunsingh/nord.nvim',
-  event = 'ColorScheme'
+  {
+    'shaunsingh/nord.nvim',
+    event = 'ColorScheme'
+  },
 }
