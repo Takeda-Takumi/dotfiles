@@ -1,5 +1,5 @@
 {
-  "lazy.nvim": { "branch": "main", "commit": "28a80136b5253a8de6dea87f335919ac9f67116d" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "nord.nvim": { "branch": "master", "commit": "0a22a387c92bb3b46e3d245522712ae7497bec38" },
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
   "sqlite.lua": { "branch": "master", "commit": "b7e28c8463254c46a8e61c52d27d6a2040492fc3" },
@@ -7,6 +7,7 @@
   "telescope-frecency.nvim": { "branch": "master", "commit": "daf59744f60e34cbb48a40a092e9e735553b6f21" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6c921ca12321edaa773e324ef64ea301a1d0da62" },
   "telescope-project.nvim": { "branch": "master", "commit": "5460c6c60d48618c5c746e5b1cad4c3e8262fdae" },
-  "telescope.nvim": { "branch": "master", "commit": "20bf20500c95208c3ac0ef07245065bf94dcab15" },
-  "tokyonight.nvim": { "branch": "main", "commit": "f247ee700b569ed43f39320413a13ba9b0aef0db" }
+  "telescope.nvim": { "branch": "master", "commit": "721cdcae134eb5c564cb6c9df6c317c3854528ad" },
+  "tokyonight.nvim": { "branch": "main", "commit": "f247ee700b569ed43f39320413a13ba9b0aef0db" },
+  "vimdoc-ja": { "branch": "master", "commit": "3da2c0f21169e1c3b7e7e460f84ac13e3026b4ec" }
 }
