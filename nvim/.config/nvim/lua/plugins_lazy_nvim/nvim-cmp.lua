@@ -11,6 +11,7 @@ return {
     'hrsh7th/cmp-vsnip',
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-nvim-lua',
   },
 
   config = function()
@@ -75,6 +76,7 @@ return {
       }, {
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'nvim_lua' },
       }),
       formatting = {
         format = require('lspkind').cmp_format({
