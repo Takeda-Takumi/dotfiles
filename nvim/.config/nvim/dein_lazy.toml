@@ -36,7 +36,7 @@ repo = 'nvim-telescope/telescope.nvim'
 depends = ['plenary.nvim']
 on_event = ['VimEnter']
 hook_source = '''
-source ~/.config/nvim/lua/plugins/telescope.nvim.lua
+source ~/.config/nvim/plugins/lua/telescope.nvim.lua
 '''
 
 # {{{ plugins
@@ -374,7 +374,7 @@ on_event = 'InsertEnter'
 [[plugins]]
 repo = 'folke/noice.nvim'
 hook_source = '''
-    source ~/.config/nvim/lua/plugins/noice.lua
+    source ~/.config/nvim/plugins/lua/noice.lua
 '''
 depends = ['nui.nvim', 'nvim-notify']
 on_event = 'VimEnter'
@@ -409,7 +409,7 @@ repo = 'nvim-lua/plenary.nvim'
 [[plugins]] # noice.nvim
 repo = 'rcarriga/nvim-notify'
 hook_source = '''
-source ~/.config/nvim/lua/plugins/nvim-notify.lua
+source ~/.config/nvim/plugins/lua/nvim-notify.lua
 '''
 
 [[plugins]] # noice.nvim
