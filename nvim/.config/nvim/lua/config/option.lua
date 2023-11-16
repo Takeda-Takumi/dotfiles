@@ -12,8 +12,9 @@ vim.opt.wrapscan = true
 -- indent
 vim.opt.autoindent = false
 vim.opt.smartindent = false
-vim.opt.shiftwidth = 0
-vim.opt.softtabstop = -1
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = -1 -- use shiftwidth when negative value
+vim.opt.tabstop = 8
 
 -- completion
 -- command line
