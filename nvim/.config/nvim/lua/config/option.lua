@@ -16,10 +16,12 @@ vim.opt.shiftwidth = 0
 vim.opt.softtabstop = -1
 
 -- completion
-vim.opt.completeopt = { 'menu' }
-vim.opt.wildmode = { 'longest:full' }
-vim.opt.infercase = true
-vim.opt.wildmenu = true
+-- command line
+  vim.opt.wildmode = { 'list:longest' }
+  vim.opt.wildmenu = false
+--insert
+  vim.opt.infercase = true
+  vim.opt.completeopt = { 'menu' }
 
 --  text edit
 vim.opt.hidden = true
