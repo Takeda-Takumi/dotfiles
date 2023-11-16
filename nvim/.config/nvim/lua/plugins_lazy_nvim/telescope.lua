@@ -65,7 +65,11 @@ return {
         file_browser = {
           hidden = { file_browser = true, folder_browser = true },
           follow_symlinks = true
+        },
+        frecency = {
+          use_sqlite = false,
         }
+
       }
     }
 
