@@ -61,14 +61,13 @@ return {
               fallback()
             end
           end,
-          c = function(fallback)
-            if cmp.visible() then
-              -- cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-              return cmp.complete_common_string()
-            else
-              fallback()
-            end
-          end
+          -- c = function(fallback)
+          --   if cmp.visible() then
+          --     return cmp.complete_common_string()
+          --   else
+          --     fallback()
+          --   end
+          -- end
         }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -76,7 +75,7 @@ return {
           else
             fallback()
           end
-        end, { 'i', 'c' }),
+        end, { 'i', }),
       },
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -113,21 +112,21 @@ return {
       })
     })
 
-    -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline({ '/', '?' }, {
-      sources = {
-        { name = 'buffer' }
-      }
-    })
-
-    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline(':', {
-      sources = cmp.config.sources({
-        { name = 'path' }
-      }, {
-        { name = 'cmdline' }
-      })
-    })
+    -- -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+    -- cmp.setup.cmdline({ '/', '?' }, {
+    --   sources = {
+    --     { name = 'buffer' }
+    --   }
+    -- })
+    --
+    -- -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+    -- cmp.setup.cmdline(':', {
+    --   sources = cmp.config.sources({
+    --     { name = 'path' }
+    --   }, {
+    --     { name = 'cmdline' }
+    --   })
+    -- })
   end
 
 
