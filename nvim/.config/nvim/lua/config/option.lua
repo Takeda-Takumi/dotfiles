@@ -9,6 +9,12 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrapscan = true
 
+-- indent
+vim.opt.autoindent = false
+vim.opt.smartindent = false
+vim.opt.shiftwidth = 0
+vim.opt.softtabstop = -1
+
 -- completion
 vim.opt.completeopt = { 'menu' }
 vim.opt.wildmode = { 'longest:full' }
