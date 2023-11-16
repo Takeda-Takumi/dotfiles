@@ -15,6 +15,7 @@ vim.opt.smartindent = false
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = -1 -- use shiftwidth when negative value
 vim.opt.tabstop = 8
+vim.opt.expandtab = true
 
 -- completion
 -- command line
