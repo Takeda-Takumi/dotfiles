@@ -51,15 +51,25 @@ return {
             fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
           end
         end,
-        ['<Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif has_words_before() then
-            cmp.mapping.complete()
-          else
-            fallback()
+        ['<Tab>'] = cmp.mapping({
+          i = function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif has_words_before() then
+              cmp.mapping.complete()
+            else
+              fallback()
+            end
+          end,
+          c = function(fallback)
+            if cmp.visible() then
+              -- cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+              return cmp.complete_common_string()
+            else
+              fallback()
+            end
           end
-        end, { 'i', 'c' }),
+        }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -105,7 +115,6 @@ return {
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({ '/', '?' }, {
-      mapping = cmp.mapping.preset.cmdline(),
       sources = {
         { name = 'buffer' }
       }
@@ -113,7 +122,6 @@ return {
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
         { name = 'path' }
       }, {
