@@ -12,8 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-      defautls = {
+      defaults = {
             lazy = true,
-      }
+      },
+      performance = {
+            cache = {
+                  enabled = true,
+            },
+      },
+
 }
 require('lazy').setup('plugins_lazy_nvim', opts)
