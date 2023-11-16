@@ -18,8 +18,9 @@ vim.opt.tabstop = 8
 
 -- completion
 -- command line
-  vim.opt.wildmode = { 'list:longest' }
-  vim.opt.wildmenu = false
+  vim.opt.wildmode = { 'longest:full', 'full' }
+  vim.opt.wildmenu = true
+  vim.opt.wildoptions = { 'pum' }
 --insert
   vim.opt.infercase = true
   vim.opt.completeopt = { 'menu' }
