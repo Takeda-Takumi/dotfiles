@@ -4,7 +4,7 @@ return {
     'williamboman/mason.nvim',
     'neovim/nvim-lspconfig',
   },
-  event = { 'BufReadPre', 'BufNewFile' },
+  event = { 'BufEnter', },
 
   config = function()
     local default_capabilities = require('cmp_nvim_lsp').default_capabilities()
