@@ -2,7 +2,7 @@ local M
 
 M = {
   'RRethy/vim-illuminate',
-  event = 'BufEnter'
+  event = 'CursorMoved'
 }
 
 return M

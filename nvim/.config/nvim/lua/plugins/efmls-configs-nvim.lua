@@ -7,7 +7,7 @@ M = {
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
   },
-  event = 'VeryLazy',
+  -- event = 'VeryLazy',
 }
 
 M.config = function()

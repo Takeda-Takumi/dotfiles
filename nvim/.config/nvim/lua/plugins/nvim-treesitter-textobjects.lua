@@ -5,11 +5,11 @@ M = {
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
   },
-  event = 'BufEnter',
+  event = 'VeryLazy',
 }
 
 M.config = function()
-  require'nvim-treesitter.configs'.setup {
+  require 'nvim-treesitter.configs'.setup {
     textobjects = {
       select = {
         enable = true,
@@ -37,7 +37,7 @@ M.config = function()
         -- mapping query_strings to modes.
         selection_modes = {
           ['@parameter.outer'] = 'v', -- charwise
-          ['@function.outer'] = 'V', -- linewise
+          ['@function.outer'] = 'V',  -- linewise
           ['@class.outer'] = '<c-v>', -- blockwise
         },
         -- If you set this to `true` (default is `false`) then any textobject is

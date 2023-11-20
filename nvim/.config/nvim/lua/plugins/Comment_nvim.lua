@@ -1,10 +1,12 @@
 local M = {
   'numToStr/Comment.nvim',
-  event = 'BufEnter',
-  config = function ()
+  config = function()
     require('Comment').setup()
   end
 }
 
-return M
+M.keys = {
+  'gc',
+}
 
+return M

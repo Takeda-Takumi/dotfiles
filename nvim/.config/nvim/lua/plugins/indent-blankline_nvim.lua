@@ -2,6 +2,6 @@ local M = {
   'lukas-reineke/indent-blankline.nvim',
   main = 'ibl',
   opts = {},
-  event = 'BufEnter',
+  event = 'VeryLazy',
 }
 return M

@@ -1,13 +1,13 @@
 local M
 M = {
   'luukvbaal/statuscol.nvim',
-  event = 'BufEnter',
-  config = function ()
+  event = 'BufReadPost',
+  config = function()
     local builtin = require('statuscol.builtin')
     require('statuscol').setup({
       segments = {
         {
-          sign = { name = {'.*'} },
+          sign = { name = { '.*' } },
           click = 'v:lua.ScSa',
         },
         {

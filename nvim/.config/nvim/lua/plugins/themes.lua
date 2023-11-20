@@ -1,10 +1,10 @@
 return {
   {
     'shaunsingh/nord.nvim',
-    event = 'ColorScheme'
+    event = 'ColorSchemePre'
   },
   {
     'folke/tokyonight.nvim',
-    event = 'ColorScheme'
+    event = 'ColorSchemePre'
   }
 }

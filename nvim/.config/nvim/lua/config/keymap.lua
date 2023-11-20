@@ -20,7 +20,7 @@ vim.keymap.set('n', 'gj,', 'j')
 
 
 vim.keymap.set('n', '\\<normal>s', function()
-      vim.cmd.source(vim.env.MYVIMRC)
+  vim.cmd.source(vim.env.MYVIMRC)
 end)
 vim.keymap.set('n', '\\<normal>w', ':<C-u>write<CR>', { silent = true })
 vim.keymap.set('n', '\\<normal>q', ':<C-u>quit<CR>', { silent = true })

@@ -1,7 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
-  event = 'BufEnter',
 
   dependencies = {
     'yioneko/nvim-yati',
