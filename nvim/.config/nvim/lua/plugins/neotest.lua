@@ -7,6 +7,7 @@ M = {
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
     'haydenmeade/neotest-jest',
+    'nvim-neotest/neotest-plenary'
   },
 
   keys = {
@@ -29,8 +30,14 @@ M.config = function()
       require('neotest-jest')({
         jestCommand = 'npm test --',
         env = { CI = true },
-      })
-    }
+        jestConfigFile = 'jest.config.mjs',
+        cwd = function(path)
+          return vim.fn.getcwd()
+        end
+      }),
+      require('neotest-plenary').setup()
+    },
+    log_level = 0
   })
 end
 
