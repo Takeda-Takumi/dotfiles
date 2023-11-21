@@ -112,6 +112,10 @@ M.config = function()
         end
         return require('lspkind').cmp_format({ with_text = true, })(entry, vim_item)
       end
+    },
+
+    performance = {
+      max_view_entries = 10,
     }
   })
 
