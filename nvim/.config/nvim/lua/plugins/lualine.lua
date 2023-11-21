@@ -186,7 +186,9 @@ M.config = function()
     color = { fg = '#ffffff', gui = 'bold' },
   }
 
-
+  ins_right {
+    'filetype',
+  }
 
   -- Add components to right sections
   ins_right {
