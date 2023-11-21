@@ -113,10 +113,10 @@ M.keys = {
   { '\\<plugin>fh', function() require('telescope.builtin').help_tags() end,                    { desc = 'telescope help_tags' } },
   { '\\<plugin>fr', function() require('telescope').extensions.frecency.frecency() end,         { desc = 'telescope frecency' } },
 
-  { '\\<plugin>e',  function() require('telescope').extensions.file_browser.file_browser() end, { desc = 'telescope file_browser cwd' } },
-  { '\\<plugin>E',
+  { '\\<plugin>E',  function() require('telescope').extensions.file_browser.file_browser() end, { desc = 'telescope file_browser current buffer' } },
+  { '\\<plugin>e',
     function() require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' }) end,
-    { desc = 'telescope file_browser current buffer' } },
+    { desc = 'telescope file_browser cwd' } },
   { '\\<plugin>fd', function() require 'telescope'.extensions.project.project {} end,
     { noremap = true, silent = true, desc = 'telescope project' } }
 }
