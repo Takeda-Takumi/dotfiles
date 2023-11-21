@@ -19,12 +19,12 @@ vim.opt.expandtab = true
 
 -- completion
 -- command line
-  vim.opt.wildmode = { 'longest:full', 'full' }
-  vim.opt.wildmenu = true
-  vim.opt.wildoptions = { 'pum' }
+vim.opt.wildmode = { 'longest:full', 'full' }
+vim.opt.wildmenu = true
+vim.opt.wildoptions = { 'pum' }
 --insert
-  vim.opt.infercase = true
-  vim.opt.completeopt = { 'menu' }
+vim.opt.infercase = true
+vim.opt.completeopt = { 'menu' }
 
 --  text edit
 vim.opt.hidden = true
