@@ -33,6 +33,8 @@ M.config = function()
   end
 
   cmp.setup({
+    preselect = 'None',
+
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
