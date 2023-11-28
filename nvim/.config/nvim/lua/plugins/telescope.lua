@@ -31,7 +31,6 @@ M = {
         require "telescope".load_extension("file_browser")
       end,
       dependencies = {
-        "kkharji/sqlite.lua",
         'nvim-lua/plenary.nvim',
       },
     },
