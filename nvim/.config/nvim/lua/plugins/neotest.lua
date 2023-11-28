@@ -7,7 +7,8 @@ M = {
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
     'haydenmeade/neotest-jest',
-    'nvim-neotest/neotest-plenary'
+    'nvim-neotest/neotest-plenary',
+    'mfussenegger/nvim-dap',
   },
 
   keys = {
@@ -18,6 +19,8 @@ M = {
     { "\\<plugin>to", function() require("neotest").output.open({ enter = true, auto_close = true }) end, desc = "Show Output" },
     { "\\<plugin>tO", function() require("neotest").output_panel.toggle() end,                            desc = "Toggle Output Panel" },
     { "\\<plugin>tS", function() require("neotest").run.stop() end,                                       desc = "Stop" },
+
+    { "\\<plugin>td", function() require("neotest").run.run({ strategy = 'dap' }) end,                    desc = "Debug Nearest" },
   }
 }
 
