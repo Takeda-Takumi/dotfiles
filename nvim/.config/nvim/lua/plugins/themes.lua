@@ -6,5 +6,9 @@ return {
   {
     'folke/tokyonight.nvim',
     event = 'ColorSchemePre'
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    event = 'ColorSchemePre'
   }
 }

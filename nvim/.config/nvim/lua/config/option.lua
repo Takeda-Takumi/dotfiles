@@ -44,11 +44,4 @@ vim.opt.viminfo = ''
 vim.opt.helplang = { 'ja', 'en' }
 
 -- colorschme
-vim.cmd [[
-try
-  colorscheme tokyonight
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+vim.cmd("colorscheme nightfox")
