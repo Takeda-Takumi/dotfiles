@@ -12,4 +12,10 @@ M = {
 
 M.cmd = 'Neogit'
 
+M.keys = {
+  { '\\<plugin>g', function()
+    require('neogit').open()
+  end, { desc = 'open Neogit' } }
+}
+
 return M
