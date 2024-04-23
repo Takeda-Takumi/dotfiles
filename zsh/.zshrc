@@ -1,5 +1,11 @@
 typeset -U PATH fpath
 
+# xdg
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:=$HOME/.cache}
+export XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.local/share}
+export XDG_STATE_HOME=${XDG_DATA_HOME:=$HOME/.local/state}
+
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="nvim"
 
@@ -7,7 +13,7 @@ bindkey -e
 
 # go
 export PATH="$PATH:/usr/local/go/bin"
-export GOPATH="$HOME/go"
+export GOPATH="$XDG_DATA_HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOBIN"
 
@@ -51,3 +57,11 @@ eval $(npm completion)
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# tex
+export TEXMFHOME=$XDG_DATA_HOME/texmf
+export TEXMFVAR=$XDG_CACHE_HOME/texlive/texmf-var
+export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
+
+# github
+eval "$(gh completion -s zsh)"
