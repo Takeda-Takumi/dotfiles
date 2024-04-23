@@ -6,7 +6,8 @@ local M = {
 }
 
 M.keys = {
-  'gc',
+  { 'gc',  mode = 'x' },
+  { 'gcc', mode = 'n', }
 }
 
 return M
