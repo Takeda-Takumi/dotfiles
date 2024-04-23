@@ -40,6 +40,24 @@ M = {
         require "telescope".load_extension('project')
       end,
     },
+
+    {
+      "delphinus/telescope-memo.nvim",
+      config = function()
+        require 'telescope'.load_extension 'memo'
+      end
+    },
+
+    {
+      'nvim-telescope/telescope.nvim',
+      tag = '0.1.5',
+      dependencies = {
+        'mollerhoj/telescope-recent-files.nvim',
+      },
+      config = function()
+        require("telescope").load_extension("recent-files")
+      end
+    },
   },
 }
 
@@ -66,10 +84,14 @@ M.config = function()
     extensions = {
       file_browser = {
         hidden = { file_browser = true, folder_browser = true },
-        follow_symlinks = true
+        follow_symlinks = true,
+        no_ignore = true,
+        respect_gitignore = false
       },
       frecency = {
         use_sqlite = false,
+        db_safe_mode = false,
+        ignore_patterns = { "*/secrets/*" }
       },
       project = {
         attach_mappings = function(prompt_bufnr, map)
@@ -83,29 +105,13 @@ M.config = function()
 
     }
   }
-
-  local builtin = require('telescope.builtin')
-  -- vim.keymap.set('n', '\\<plugin>ff', builtin.find_files, { desc = 'telescope find_files' })
-  -- vim.keymap.set('n', '\\<plugin>fg', builtin.live_grep, { desc = 'telescope live_grep' })
-  -- vim.keymap.set('n', '\\<plugin>fb', builtin.buffers, { desc = 'telescope buffers' })
-  -- vim.keymap.set('n', '\\<plugin>fh', builtin.help_tags, { desc = 'telescope help_tags' })
-  -- vim.keymap.set('n', '\\<plugin>fr', "<Cmd>Telescope frecency<CR>", { desc = 'telescope frecency' })
-
-  -- vim.keymap.set('n', '\\<plugin>e',
-  --   "<cmd>lua require('telescope').extensions.file_browser.file_browser()<CR>", { desc = 'telescope file_browser cwd' })
-  -- vim.keymap.set('n', '\\<plugin>E',
-  --   "<cmd>lua require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' })<CR>",
-  --   { desc = 'telescope file_browser current buffer' })
-  -- vim.keymap.set('n', '\\<plugin>fd', ":lua require'telescope'.extensions.project.project{}<CR>",
-  --   { noremap = true, silent = true, desc = 'telescope project' })
 end
 
+M.cmd = {
+  'Telescope'
+}
+
 M.keys = {
-  -- {
-  --   ['\\<plugin>'] = {
-  --     { 'ff', function() require('telescope.builtin').find_files() end, { desc = 'telescope find_files' } },
-  --   },
-  -- },
   { '\\<plugin>ff', function() require('telescope.builtin').find_files() end,                   { desc = 'telescope find_files' } },
   { '\\<plugin>fg', function() require('telescope.builtin').live_grep() end,                    { desc = 'telescope live_grep' } },
   { '\\<plugin>fb', function() require('telescope.builtin').buffers() end,                      { desc = 'telescope buffers' } },
