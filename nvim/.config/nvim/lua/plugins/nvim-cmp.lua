@@ -12,7 +12,7 @@ M = {
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-nvim-lua',
-    'nvim-tree/nvim-web-devicons'
+    'nvim-tree/nvim-web-devicons',
   },
 }
 
@@ -101,7 +101,9 @@ M.config = function()
       { name = 'buffer' },
       { name = 'path' },
       { name = 'nvim_lua' },
+      { name = 'skkeleton' }
     }),
+
     formatting = {
       format = function(entry, vim_item)
         if vim.tbl_contains({ 'path' }, entry.source.name) then
