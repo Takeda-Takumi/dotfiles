@@ -1,17 +1,16 @@
 local M
 
 M = {
-  'nvim-telescope/telescope.nvim',
+  "nvim-telescope/telescope.nvim",
 
   dependencies = {
-    'nvim-lua/plenary.nvim',
+    "nvim-lua/plenary.nvim",
 
     {
       "nvim-telescope/telescope-frecency.nvim",
       config = function()
-        require "telescope".load_extension("frecency")
+        require("telescope").load_extension("frecency")
       end,
-      dependencies = { "kkharji/sqlite.lua" }
     },
 
     {
@@ -21,109 +20,152 @@ M = {
         require("telescope").load_extension("fzf")
       end,
       cond = function()
-        return vim.fn.executable 'make' == 1
+        return vim.fn.executable("make") == 1
       end,
     },
 
     {
       "nvim-telescope/telescope-file-browser.nvim",
       config = function()
-        require "telescope".load_extension("file_browser")
+        require("telescope").load_extension("file_browser")
       end,
       dependencies = {
-        'nvim-lua/plenary.nvim',
+        "nvim-lua/plenary.nvim",
       },
     },
     {
       "nvim-telescope/telescope-project.nvim",
       config = function()
-        require "telescope".load_extension('project')
+        require("telescope").load_extension("project")
       end,
     },
 
     {
       "delphinus/telescope-memo.nvim",
       config = function()
-        require 'telescope'.load_extension 'memo'
-      end
+        require("telescope").load_extension("memo")
+      end,
     },
 
     {
-      'nvim-telescope/telescope.nvim',
-      tag = '0.1.5',
+      "nvim-telescope/telescope.nvim",
+      tag = "0.1.5",
       dependencies = {
-        'mollerhoj/telescope-recent-files.nvim',
+        "mollerhoj/telescope-recent-files.nvim",
       },
       config = function()
         require("telescope").load_extension("recent-files")
-      end
+      end,
     },
   },
 }
 
 M.config = function()
-  local telescope = require('telescope')
+  local telescope = require("telescope")
 
-  telescope.setup {
+  telescope.setup({
     defaults = {
       mappings = {
         i = {
-          ['<C-j>'] = 'move_selection_next',
-          ['<C-k>'] = 'move_selection_previous',
-          ['<C-l>'] = 'select_default',
-          ['<C-p>'] = require('telescope.actions.layout').toggle_preview
+          ["<C-j>"] = "move_selection_next",
+          ["<C-k>"] = "move_selection_previous",
+          ["<C-l>"] = "select_default",
+          ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
         },
       },
     },
     picker = {
       layout_config = {
-        preview_cutoff = 0
+        preview_cutoff = 0,
       },
-
     },
     extensions = {
       file_browser = {
         hidden = { file_browser = true, folder_browser = true },
         follow_symlinks = true,
         no_ignore = true,
-        respect_gitignore = false
+        respect_gitignore = false,
       },
       frecency = {
         use_sqlite = false,
         db_safe_mode = false,
-        ignore_patterns = { "*/secrets/*" }
+        auto_validate = false,
+        ignore_patterns = { "*/secrets/*" },
       },
       project = {
         attach_mappings = function(prompt_bufnr, map)
-          map('i', '<C-W>', function()
-            require('telescope._extensions.project.actions').
-                chenge_working_directory(prompt_bufnr, false)
+          map("i", "<C-W>", function()
+            require("telescope._extensions.project.actions").chenge_working_directory(prompt_bufnr, false)
           end)
           return true
-        end
-      }
-
-    }
-  }
+        end,
+      },
+    },
+  })
 end
 
 M.cmd = {
-  'Telescope'
+  "Telescope",
 }
 
 M.keys = {
-  { '\\<plugin>ff', function() require('telescope.builtin').find_files() end,                   { desc = 'telescope find_files' } },
-  { '\\<plugin>fg', function() require('telescope.builtin').live_grep() end,                    { desc = 'telescope live_grep' } },
-  { '\\<plugin>fb', function() require('telescope.builtin').buffers() end,                      { desc = 'telescope buffers' } },
-  { '\\<plugin>fh', function() require('telescope.builtin').help_tags() end,                    { desc = 'telescope help_tags' } },
-  { '\\<plugin>fr', function() require('telescope').extensions.frecency.frecency() end,         { desc = 'telescope frecency' } },
+  {
+    "\\<plugin>ff",
+    function()
+      require("telescope.builtin").find_files()
+    end,
+    { desc = "telescope find_files" },
+  },
+  {
+    "\\<plugin>fg",
+    function()
+      require("telescope.builtin").live_grep()
+    end,
+    { desc = "telescope live_grep" },
+  },
+  {
+    "\\<plugin>fb",
+    function()
+      require("telescope.builtin").buffers()
+    end,
+    { desc = "telescope buffers" },
+  },
+  {
+    "\\<plugin>fh",
+    function()
+      require("telescope.builtin").help_tags()
+    end,
+    { desc = "telescope help_tags" },
+  },
+  {
+    "\\<plugin>fr",
+    function()
+      require("telescope").extensions.frecency.frecency()
+    end,
+    { desc = "telescope frecency" },
+  },
 
-  { '\\<plugin>E',  function() require('telescope').extensions.file_browser.file_browser() end, { desc = 'telescope file_browser current buffer' } },
-  { '\\<plugin>e',
-    function() require('telescope').extensions.file_browser.file_browser({ path = '%:p:h' }) end,
-    { desc = 'telescope file_browser cwd' } },
-  { '\\<plugin>fd', function() require 'telescope'.extensions.project.project {} end,
-    { noremap = true, silent = true, desc = 'telescope project' } }
+  {
+    "\\<plugin>E",
+    function()
+      require("telescope").extensions.file_browser.file_browser()
+    end,
+    { desc = "telescope file_browser current buffer" },
+  },
+  {
+    "\\<plugin>e",
+    function()
+      require("telescope").extensions.file_browser.file_browser({ path = "%:p:h" })
+    end,
+    { desc = "telescope file_browser cwd" },
+  },
+  {
+    "\\<plugin>fd",
+    function()
+      require("telescope").extensions.project.project({})
+    end,
+    { noremap = true, silent = true, desc = "telescope project" },
+  },
 }
 
 return M

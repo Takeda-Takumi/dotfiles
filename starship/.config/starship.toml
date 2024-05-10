@@ -1,5 +1,6 @@
 [status]
 disabled = false
+symbol = '❌ '
 
 [git_status]
 deleted = '✘ '
@@ -8,3 +9,8 @@ deleted = '✘ '
 command = "git config user.email"
 when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1 && test $(git config user.email) != '' "
 format = 'by [($output)](fg:blue) '
+
+[jobs]
+symbol = '✦ ' 
+
+
