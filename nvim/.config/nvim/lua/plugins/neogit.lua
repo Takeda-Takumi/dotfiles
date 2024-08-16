@@ -14,7 +14,7 @@ M.cmd = 'Neogit'
 
 M.keys = {
   { '\\<plugin>g', function()
-    require('neogit').open()
+    require('neogit').open({ kind = 'replace' })
   end, { desc = 'open Neogit' } }
 }
 

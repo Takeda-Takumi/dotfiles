@@ -1,7 +1,14 @@
 local M = {
   'lukas-reineke/indent-blankline.nvim',
-  main = 'ibl',
-  opts = {},
   event = 'VeryLazy',
+  config = function()
+    require('ibl').setup({
+      exclude = {
+        filetypes = {
+          "dashboard",
+        }
+      }
+    })
+  end
 }
 return M

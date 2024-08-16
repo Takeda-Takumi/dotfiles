@@ -73,6 +73,16 @@ M.config = function()
           ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
         },
       },
+      vimgrep_arguments = {
+        'rg',
+        '--color=never',
+        '--no-heading',
+        '--with-filename',
+        '--line-number',
+        '--column',
+        '--smart-case',
+        '-u'
+      }
     },
     picker = {
       layout_config = {

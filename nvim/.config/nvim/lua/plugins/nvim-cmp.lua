@@ -1,6 +1,7 @@
 local M
 
 M = {
+  event = "InsertEnter",
   'hrsh7th/nvim-cmp',
 
   dependencies = {
@@ -14,10 +15,6 @@ M = {
     'hrsh7th/cmp-nvim-lua',
     'nvim-tree/nvim-web-devicons',
   },
-}
-
-M.keys = {
-  { '<Tab>', mode = { 'i' } }
 }
 
 M.config = function()
@@ -35,6 +32,14 @@ M.config = function()
   cmp.setup({
     preselect = 'None',
 
+    completion = {
+      autocomplete = {
+        cmp.TriggerEvent.TextChanged,
+        cmp.TriggerEvent.InsertEnter,
+      },
+      keyword_length = 0
+    },
+
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
@@ -51,12 +56,11 @@ M.config = function()
     mapping = {
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       ['<CR>'] = function(fallback)
         if cmp.visible() then
-          cmp.confirm({ select = true })
+          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
         else
           fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
         end
@@ -117,10 +121,6 @@ M.config = function()
         return require('lspkind').cmp_format({ with_text = true, })(entry, vim_item)
       end
     },
-
-    performance = {
-      max_view_entries = 10,
-    }
   })
 
   -- Set configuration for specific filetype.

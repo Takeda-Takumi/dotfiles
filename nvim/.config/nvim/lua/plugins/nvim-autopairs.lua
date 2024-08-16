@@ -7,7 +7,8 @@ return {
     local cond = require 'nvim-autopairs.conds'
 
     npairs.setup({
-      fast_wrap = {}
+      fast_wrap = {},
+      enable_check_bracket_line = false,
     })
 
 

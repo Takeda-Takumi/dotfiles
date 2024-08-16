@@ -11,7 +11,6 @@ M.config = function()
     -- print(vim.inspect(require('mason-registry').get_installed_package_names()))
     ensure_installed = {
       -- lua
-      "stylua",
       "lua-language-server",
 
       -- haskell
@@ -42,6 +41,7 @@ M.config = function()
       "clangd",
 
       -- other
+      'efm',
       "checkstyle",
       "actionlint",
     },

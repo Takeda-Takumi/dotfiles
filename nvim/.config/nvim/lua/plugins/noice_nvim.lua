@@ -39,7 +39,15 @@ M.config = function()
         view = 'mini',
         filter = { event = 'msg_showmode', find = 'recording @' }
       },
-    }
+      {
+        filter = {
+          event = "msg_show",
+          kind = "",
+          find = "written",
+        },
+        opts = { skip = true }
+      }
+    },
   })
 end
 

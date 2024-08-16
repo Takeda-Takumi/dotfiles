@@ -9,6 +9,7 @@ M = {
     'haydenmeade/neotest-jest',
     'nvim-neotest/neotest-plenary',
     'mfussenegger/nvim-dap',
+    'nvim-neotest/nvim-nio'
   },
 
   keys = {

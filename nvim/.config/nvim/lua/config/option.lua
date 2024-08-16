@@ -3,6 +3,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.wrap = false
 vim.opt.list = true
+vim.opt.pumheight = 20
 
 -- search
 vim.opt.ignorecase = true
