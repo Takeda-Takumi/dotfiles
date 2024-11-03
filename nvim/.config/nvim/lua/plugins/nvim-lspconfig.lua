@@ -1,13 +1,22 @@
 return {
   'neovim/nvim-lspconfig',
+  event = "VeryLazy",
+
   config = function()
     local lspconfig = require('lspconfig')
 
     lspconfig.nil_ls.setup({
       autostart = true,
-      cmd = { "nil" }
-
     })
+
+    lspconfig.lua_ls.setup {
+      autostart = true,
+    }
+
+    lspconfig.ts_ls.setup {
+      autostart = true,
+    }
+
 
     --lspconfig Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
