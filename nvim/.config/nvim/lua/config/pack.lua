@@ -19,6 +19,7 @@ local opts = {
     cache = {
       enabled = true,
     },
+    reset_packpath = false
   },
 }
 

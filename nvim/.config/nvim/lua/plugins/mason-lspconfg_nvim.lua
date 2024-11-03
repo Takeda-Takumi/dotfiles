@@ -30,6 +30,7 @@ M.ft = {
   "ruby",
   "sql",
   "toml",
+  "nix"
 }
 
 M.config = function()

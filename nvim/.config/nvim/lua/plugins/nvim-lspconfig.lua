@@ -3,6 +3,12 @@ return {
   config = function()
     local lspconfig = require('lspconfig')
 
+    lspconfig.nil_ls.setup({
+      autostart = true,
+      cmd = { "nil" }
+
+    })
+
     --lspconfig Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
     vim.keymap.set('n', '\\<plugin>o', vim.diagnostic.open_float)
