@@ -1,6 +1,7 @@
 local M
 
 M = {
+  enabled = false,
   "williamboman/mason-lspconfig.nvim",
   dependencies = {
     "williamboman/mason.nvim",

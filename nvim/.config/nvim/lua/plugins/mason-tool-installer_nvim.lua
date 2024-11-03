@@ -1,5 +1,5 @@
 local M = {
-  enabled = true,
+  enabled = false,
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = {
     "williamboman/mason.nvim",
