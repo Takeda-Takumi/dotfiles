@@ -22,6 +22,7 @@ in
       }
     ];
     extraPackages = with pkgs; [
+      gcc
 
       #lsp
       nil

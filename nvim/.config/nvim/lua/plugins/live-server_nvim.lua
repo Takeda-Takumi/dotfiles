@@ -1,4 +1,5 @@
 local M = {
+  enabled = false,
   'barrett-ruth/live-server.nvim',
   build = 'npm add -g live-server',
   cmd = { 'LiveServerStart', 'LiveServerStop' },
