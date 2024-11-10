@@ -1,11 +1,16 @@
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  ...
+}:
+let
+  username = "takeda";
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "takeda";
-  home.homeDirectory = "/home/takeda";
-  xdg.stateHome = "/home/takeda/.local/share";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -109,23 +114,7 @@
     };
   };
 
-  programs.neovim = {
-    enable = true;
-    plugins = with pkgs.vimPlugins; [
-      vim-nix
-      gruvbox-nvim
-      {
-        plugin = nvim-lspconfig;
-      }
-    ];
-    extraPackages = with pkgs; [
-
-      #lsp
-      nil
-      lua-language-server
-      typescript-language-server
-    ];
-  };
+  imports = [ ./nvim ];
 
   programs.starship = {
     enable = true;
