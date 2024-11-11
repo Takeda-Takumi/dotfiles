@@ -16,9 +16,11 @@ M.config = function()
 
   local eslint_d = require('efmls-configs.linters.eslint_d')
   local prettier = require('efmls-configs.formatters.prettier')
+  local actionlint = require('efmls-configs.linters.actionlint')
 
   languages = vim.tbl_extend('force', languages, {
-    typescript = { eslint_d, prettier }
+    typescript = { eslint_d, prettier },
+    yaml = { actionlint }
   })
 
   local efmls_config = {

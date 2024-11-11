@@ -17,6 +17,9 @@ return {
       autostart = true,
     }
 
+    lspconfig.pyright.setup {
+    }
+
 
     --lspconfig Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions

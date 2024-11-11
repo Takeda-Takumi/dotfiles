@@ -24,10 +24,19 @@ in
     extraPackages = with pkgs; [
       gcc
 
+      # linter
+      actionlint
+
       #lsp
       nil
       lua-language-server
       typescript-language-server
+      efm-langserver
+      pyright
+
+      # formatter
+      isort
+      black
     ];
     extraLuaConfig = ''
       require('config')
