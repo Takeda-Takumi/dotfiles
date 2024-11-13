@@ -13,7 +13,7 @@ M = {
 M.cmd = 'Neogit'
 
 M.keys = {
-  { '\\<plugin>g', function()
+  { '[<plugin>]g', function()
     require('neogit').open({ kind = 'replace' })
   end, { desc = 'open Neogit' } }
 }

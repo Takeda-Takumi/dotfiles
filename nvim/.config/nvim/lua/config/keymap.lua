@@ -1,7 +1,7 @@
 vim.keymap.set('n', '\\<normal>', '<nop>')
-vim.keymap.set('n', '\\<plugin>', '<nop>')
+vim.keymap.set('n', '[<plugin>]', '<nop>')
 vim.keymap.set('n', '<Space>', '\\<normal>', { remap = true })
-vim.keymap.set('n', ',', '\\<plugin>', { remap = true })
+vim.keymap.set('n', ',', '[<plugin>]', { remap = true })
 
 vim.keymap.set('n', '[q', ':<C-u>cprev<CR>', { silent = true, remap = false })
 vim.keymap.set('n', ']q', ':<C-u>cnext<CR>', { silent = true, remap = false })
