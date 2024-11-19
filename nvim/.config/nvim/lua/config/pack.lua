@@ -25,6 +25,6 @@ local opts = {
 
 require('lazy').setup('plugins', opts)
 
-vim.keymap.set('n', '\\<plugin>l', function()
+vim.keymap.set('n', '[<plugin>]l', function()
   require('lazy').home()
 end)
