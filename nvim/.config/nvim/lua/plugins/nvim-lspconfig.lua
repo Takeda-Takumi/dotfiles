@@ -1,6 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
 
   config = function()
     local lspconfig = require('lspconfig')
@@ -18,6 +18,7 @@ return {
     }
 
     lspconfig.pyright.setup {
+      autostart = true,
     }
 
 
