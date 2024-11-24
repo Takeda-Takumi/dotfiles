@@ -3,11 +3,12 @@ let
   traceValSeq = pkgs.lib.debug.traceValSeq;
   traceValFn = pkgs.lib.debug.traceValFn;
   addDebugMessage = message: x: traceValFn (v: message + "${v}") x;
+  symlink = config.lib.file.mkOutOfStoreSymlink;
 in
 {
   imports = [
     ./plugins/markdown-preview-nvim
-    ./plugins/skkeleton
+    # ./plugins/skkeleton
   ];
 
   programs.neovim = {
@@ -42,27 +43,23 @@ in
       require('config')
     '';
   };
-  # home.file =
-  #   let
-  #     nvimHome = "/../../nvim/.config/nvim/";
-  #     addBaseDirectory = baseDirectory: path: addDebugMessage "concat: " (traceValSeq baseDirectory + traceValSeq path);
-  #     configFile = 
-  #       file: {
-  #           ".config/nvim/${file}" = {
-  #           source = addDebugMessage "in configFile " (./. + addBaseDirectory nvimHome file);
-  #         };
-  #       };
-  #     configFiles = files: builtins.foldl' (x: y: x // y) { } (map configFile files);
-  #   in {
-  #   ".config/nvim/lua/plugins/" = {
-  #     source = (./. + addBaseDirectory nvimHome "lua/plugins");
-  #     recursive = true;
-  #   };
-  # } // 
-  #   configFiles [
-  #    "lua/config/init.lua"
-  #    "lua/config/keymap.lua"
-  #    "lua/config/option.lua"
-  #    "lua/config/pack.lua"
-  #   ];
+  home.file =
+    let
+      nvimHome = "${config.home.homeDirectory}/dotfiles/nvim/.config/nvim/";
+      addBaseDirectory =
+        baseDirectory: path: addDebugMessage "concat: " (traceValSeq baseDirectory + traceValSeq path);
+      configFile = file: {
+        ".config/nvim/${file}" = {
+          source = addDebugMessage "in configFile " (
+            addDebugMessage "symlink: " (symlink (addBaseDirectory nvimHome file))
+          );
+          recursive = true;
+        };
+      };
+      configFiles = files: builtins.foldl' (x: y: x // y) { } (map configFile files);
+    in
+    configFiles [
+      "lua/config"
+      "lua/plugins"
+    ];
 }
