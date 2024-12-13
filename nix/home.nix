@@ -29,6 +29,8 @@ in
     hello
     stow
 
+    python3
+
     act
     actionlint
     # # Adds the 'hello' command to your environment. It prints a friendly
@@ -131,4 +133,13 @@ in
     enable = true;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+  services.ssh-agent = {
+    enable = true;
+  };
 }

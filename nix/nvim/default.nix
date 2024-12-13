@@ -35,9 +35,15 @@ in
       efm-langserver
       pyright
 
+      # debug
+      python312Packages.debugpy
+
       # formatter
       isort
       black
+
+      # telescope
+      ripgrep
     ];
     extraLuaConfig = ''
       require('config')
