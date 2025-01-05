@@ -36,9 +36,15 @@ in
       pyright
       jdt-language-server
 
+      # debug
+      python312Packages.debugpy
+
       # formatter
       isort
       black
+
+      # telescope
+      ripgrep
     ];
     extraLuaConfig = ''
       require('config')

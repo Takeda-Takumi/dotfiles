@@ -120,35 +120,35 @@ M.cmd = {
 
 M.keys = {
   {
-    "[<plugin>]ff",
+    ",ff",
     function()
       require("telescope.builtin").find_files()
     end,
     { desc = "telescope find_files" },
   },
   {
-    "[<plugin>]fg",
+    ",fg",
     function()
       require("telescope.builtin").live_grep()
     end,
     { desc = "telescope live_grep" },
   },
   {
-    "[<plugin>]fb",
+    ",fb",
     function()
       require("telescope.builtin").buffers()
     end,
     { desc = "telescope buffers" },
   },
   {
-    "[<plugin>]fh",
+    ",fh",
     function()
       require("telescope.builtin").help_tags()
     end,
     { desc = "telescope help_tags" },
   },
   {
-    "[<plugin>]fr",
+    ",fr",
     function()
       require("telescope").extensions.frecency.frecency()
     end,
@@ -156,21 +156,21 @@ M.keys = {
   },
 
   {
-    "[<plugin>]E",
+    ",E",
     function()
       require("telescope").extensions.file_browser.file_browser()
     end,
     { desc = "telescope file_browser current buffer" },
   },
   {
-    "[<plugin>]e",
+    ",e",
     function()
       require("telescope").extensions.file_browser.file_browser({ path = "%:p:h" })
     end,
     { desc = "telescope file_browser cwd" },
   },
   {
-    "[<plugin>]fd",
+    ",fd",
     function()
       require("telescope").extensions.project.project({})
     end,

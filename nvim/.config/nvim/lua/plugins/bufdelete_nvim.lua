@@ -2,7 +2,7 @@ return {
   'famiu/bufdelete.nvim',
   keys = {
     {
-      '[<plugin>]d',
+      ',d',
       function() require('bufdelete').bufdelete(0) end
     }
   }
