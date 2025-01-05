@@ -34,6 +34,7 @@ in
       typescript-language-server
       efm-langserver
       pyright
+      jdt-language-server
 
       # formatter
       isort

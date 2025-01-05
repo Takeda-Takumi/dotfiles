@@ -21,6 +21,10 @@ return {
       autostart = true,
     }
 
+    lspconfig.jdtls.setup {
+      autostart = true,
+    }
+
 
     --lspconfig Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
